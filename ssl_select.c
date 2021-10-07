@@ -37,12 +37,12 @@ static void sigpipe_handle(int x){
 static int password_cb(char *buf,int num,
 		int rwflag,void *userdata)
 {
-	ssl_passwd_data * _password;
+	ssl_pwd_data * _password;
 	
 	if(userdata == 0)
 		return 0;
 
-	_password = (ssl_passwd_data *)userdata;
+	_password = (ssl_pwd_data *)userdata;
 
 	if(_password->len > num){
 		printf("sys buf len %d < passlen %d\n", num, _password->len);
@@ -82,7 +82,10 @@ static int verify_callback (int ok, X509_STORE_CTX *store)
 	return ok;
 }
 
-
+/** init ssl library
+* calls SSL_library_init(), SSL_load_error_strings()...etc.
+* should be called before any SSL action
+*/
 void init_ssl_lib(void)
 {
 	SSL_library_init();
@@ -101,6 +104,12 @@ static int _strvalid(char * buf, int bufmax)
 	return len;
 }
 
+/** Initialize SSL_CTX 
+* \param[in] rootCA the path to the rootCA.pem file
+* \param[in] keyfile the path to the private/public key file
+* \param[in] password the password of the private key, set to "" if no password is needed
+* \param[out] _pwd the ssl_pwd_data address for storing the lookup data
+*/
 SSL_CTX *initialize_ctx(char *rootCA, char * keyfile, char * password, 
 			ssl_pwd_data * _pwd)
 {
@@ -127,14 +136,13 @@ SSL_CTX *initialize_ctx(char *rootCA, char * keyfile, char * password,
 		
 		if(password != 0 && 
 			_strvalid(password, SSL_SEL_PASSWORD_MAX) &&
-			retpwd != 0){
+			_pwd != 0){
 			snprintf(_pwd->data, sizeof(_pwd->data), "%s", password);
 			_pwd->len = _strvalid(password, SSL_SEL_PASSWORD_MAX);
 
-			SSL_CTX_set_default_passwd_cb_userdata(ctx,
-			_pwd);
-			SSL_CTX_set_default_passwd_cb(ctx,
-					password_cb);
+			SSL_CTX_set_default_passwd_cb_userdata(ctx, _pwd);
+
+			SSL_CTX_set_default_passwd_cb(ctx, password_cb);
 			
 
 		}
@@ -165,12 +173,21 @@ SSL_CTX *initialize_ctx(char *rootCA, char * keyfile, char * password,
 	return ctx;
 }
 
+/** destroy SSL_CTX
+* \param[in] ctx the SSL_CTX
+*/
 void destroy_ctx(SSL_CTX *ctx)
 {
 	SSL_CTX_free(ctx);
 }
 
-
+/** set the fd_set for a given ssl_info
+* \param[in] info the ssl_info
+* \param[in] maxfd the current maxfd for select
+* \param[out] rfds the read fd_set *
+* \param[out] wfds the write fd_set *
+* \return the new maxfd
+*/
 int ssl_set_fds(ssl_info *info, 
 	int maxfd, fd_set *rfds, fd_set *wfds)
 {
@@ -269,7 +286,6 @@ static int show_x509_err_str(ssl_info *info, char * buf, int len)
 	return rlen;
 }
 
-
 static int _do_ssl_update_wait_event(ssl_info * info, wait_event * wevent, 
 		int ssl_errno, const char * func_str)
 {
@@ -299,6 +315,14 @@ static int _do_ssl_update_wait_event(ssl_info * info, wait_event * wevent,
 	return SSL_OPS_FAIL;
 }
 
+/** Convert the ssl_errno to an error string
+* if SSL_OPS_FAIL is returned, retrieve a error string.
+* \param[in] info the ssl_info.
+* \param[in] ssl_errno the error number returned by the failing function.
+* \param[out] buf the buffer for string output.
+* \param[in] buflen the buffer length.
+* \return the length of the error string.
+*/
 int ssl_errno_str(ssl_info * info, int ssl_errno, char * buf, int buflen)
 {
 	int len;
@@ -335,246 +359,90 @@ int ssl_errno_str(ssl_info * info, int ssl_errno, char * buf, int buflen)
 #define _ssl_update_wait_event(INFO, WEVENT, ERRNO)	\
 	_do_ssl_update_wait_event(INFO, &(INFO->WEVENT), ERRNO, __func__)
 
-int ssl_accept_direct(ssl_info * info, int * r_errno)
-{
-	int ret;
-	int ssl_errno;
-	info->accept.read = 0;
-	info->accept.write = 0;
-
-	//printf("%s(%d)\n", __func__, __LINE__);
-
-	ret = SSL_accept(info->ssl);
-	if(ret > 0)
-		return ret;
-
-	ssl_errno = SSL_get_error(info->ssl, ret);
-
-	if(r_errno){
-		*r_errno = ssl_errno;
-	}
-	
-	return _ssl_update_wait_event(info, accept, ssl_errno);
+#define GEN_SSL_ACTION_DIRECT(ACTION, FUNC, SUCCESS_COND, ...) \
+int ssl_##ACTION##_direct(ssl_info * info, ##__VA_ARGS__, int * r_errno)\
+{\
+	int ret;\
+	int ssl_errno;\
+	info->ACTION.read = 0;\
+	info->ACTION.write = 0;\
+	\
+	ret = (FUNC);\
+	\
+	if(SUCCESS_COND){\
+		/*printf("%s success\n", __func__);*/\
+		return ret;\
+	}\
+	ssl_errno = SSL_get_error(info->ssl, ret);\
+	\
+	if(r_errno){\
+		*r_errno = ssl_errno;\
+	}\
+	\
+	return _ssl_update_wait_event(info, ACTION, ssl_errno);\
 }
 
-int ssl_accept_simple_tv(ssl_info * info, struct timeval * tv, int *ssl_errno)
-{
-	int ret;
-	fd_set rfds, wfds;
+GEN_SSL_ACTION_DIRECT(accept, SSL_accept(info->ssl), ret == 1);
+GEN_SSL_ACTION_DIRECT(connect, SSL_connect(info->ssl), ret == 1);
+GEN_SSL_ACTION_DIRECT(recv, SSL_read(info->ssl, buf, len), ret > 0,void *buf, int len);
+GEN_SSL_ACTION_DIRECT(send, SSL_write(info->ssl, buf, len), ret > 0, void *buf, int len);
 
-	do{
-		ret = ssl_accept_direct(info, ssl_errno);
-		if(ret > 0){
-			return 0;
-
-		}else if(ret == SSL_OPS_FAIL){
-			break;
-		}
-
-		FD_ZERO(&rfds);
-		FD_ZERO(&wfds);
-
-		ssl_set_fds(info, 0, &rfds, &wfds);
-		ret = select( info->sk + 1, &rfds, &wfds, 0, tv);
-	
-	}while(ret > 0);
-
-	return -1;
+#define GEN_SSL_ACTION_SIMPLE_TV(ACTION, FUNC, SUCCESS_COND, ...) \
+int ssl_##ACTION##_simple_tv(ssl_info * info, ##__VA_ARGS__, struct timeval * tv, int *ssl_errno)\
+{\
+	int ret, sel;\
+	fd_set rfds, wfds;\
+	\
+	do{\
+		ret = (FUNC);\
+		\
+		if(SUCCESS_COND){\
+			return ret;\
+		}else if(ret == SSL_OPS_FAIL){\
+			break;\
+		}\
+		\
+		FD_ZERO(&rfds);\
+		FD_ZERO(&wfds);\
+		\
+		ssl_set_fds(info, 0, &rfds, &wfds);\
+		sel = select( info->sk + 1, &rfds, &wfds, 0, tv);\
+		\
+	}while(sel > 0);\
+	\
+	return ret;\
 }
 
-int ssl_accept_simple(ssl_info * info, int to_ms, int *ssl_errno)
-{
-	
-	struct timeval tv;
+GEN_SSL_ACTION_SIMPLE_TV(accept, 
+	ssl_accept_direct(info, ssl_errno), ret == 1);
 
-	tv.tv_sec = to_ms / 1000;
-	tv.tv_usec = (to_ms % 1000) * 1000;	
+GEN_SSL_ACTION_SIMPLE_TV(connect, 
+	ssl_connect_direct(info, ssl_errno), ret == 1);
 
-	return ssl_accept_simple_tv(info, &tv, ssl_errno);
-}
+GEN_SSL_ACTION_SIMPLE_TV(recv, 
+	ssl_recv_direct(info, buf, len, ssl_errno), ret > 0, void *buf, int len);
 
-int ssl_connect_direct(ssl_info * info, int * r_errno)
-{
-	int ret;
-	int ssl_errno;
-	info->connect.read = 0;
-	info->connect.write = 0;
+GEN_SSL_ACTION_SIMPLE_TV(send, 
+	ssl_send_direct(info, buf, len, ssl_errno), ret > 0, void *buf, int len);
 
-	printf("%s(%d)\n", __func__, __LINE__);
-
-	ret = SSL_connect(info->ssl);
-	if(ret > 0)
-		return ret;
-
-	ssl_errno = SSL_get_error(info->ssl, ret);
-
-	if(r_errno){
-		*r_errno = ssl_errno;
-	}
-	
-	return _ssl_update_wait_event(info, connect, ssl_errno);
-}
-
-int ssl_connect_simple_tv(ssl_info * info, struct timeval * tv, int *ssl_errno)
-{
-	int ret;
-	fd_set rfds, wfds;
-
-	do{
-		ret = ssl_connect_direct(info, ssl_errno);
-		if(ret > 0){
-			return 0;
-
-		}else if(ret == SSL_OPS_FAIL){
-			break;
-		}
-
-		FD_ZERO(&rfds);
-		FD_ZERO(&wfds);
-
-		ssl_set_fds(info, 0, &rfds, &wfds);
-		ret = select( info->sk + 1, &rfds, &wfds, 0, tv);
-	
-	}while(ret > 0);
-
-	return -1;
-}
-
-
-int ssl_connect_simple(ssl_info * info, int to_ms, int *ssl_errno)
-{
-	
-	struct timeval tv;
-
-	tv.tv_sec = to_ms / 1000;
-	tv.tv_usec = (to_ms % 1000) * 1000;	
-
-	return ssl_connect_simple_tv(info, &tv, ssl_errno);
-}
-
-
-int ssl_send_direct(ssl_info * info, char *buf, int len, int *r_errno)
-{
-	int wlen;
-	int ssl_errno;
-
-	info->send.write = 0;
-	info->send.read = 0;
-
-	wlen = SSL_write(info->ssl, buf, len);
-	if(wlen > 0){
-		return wlen;
-	}
-
-	ssl_errno = SSL_get_error(info->ssl, wlen);
-
-	if(r_errno){
-		*r_errno = ssl_errno;
-	}
-
-	return _ssl_update_wait_event(info, send, ssl_errno);
-}
-
-int ssl_recv_direct(ssl_info * info, char * buf, int len, int *r_errno)
-{
-	int rlen;
-	int ssl_errno;
-
-	info->recv.write = 0;
-	info->recv.read = 0;
-	rlen = SSL_read(info->ssl, buf, len);
-	if(rlen > 0){
-		return rlen;
-	}
-
-	ssl_errno = SSL_get_error(info->ssl, rlen);
-
-	if(r_errno){
-		*r_errno = ssl_errno;
-	}
-
-	return _ssl_update_wait_event(info, recv, ssl_errno);
-}
-
-int ssl_send_simple_tv(ssl_info * info, void * buf, int len, struct timeval *tv, int *ssl_errno)
-{
-	int ret;
-
-	fd_set rfds, wfds;
-
-	do{
-		int slen;
-
-		slen = ssl_send_direct(info, buf, len, ssl_errno);
-		if(slen > 0){
-			return slen;
-
-		}else if(slen == SSL_OPS_FAIL){
-			break;
-		}
-
-		FD_ZERO(&rfds);
-		FD_ZERO(&wfds);
-
-		ssl_set_fds(info, 0, &rfds, &wfds);
-		ret = select( info->sk + 1, &rfds, &wfds, 0, tv);
-	
-	}while(ret > 0);
-
-	return 0;
-}
-
-
-int ssl_send_simple(ssl_info * info, void * buf, int len, int to_ms, int *ssl_errno)
-{
-	
-	struct timeval tv;
-	
-	tv.tv_sec = to_ms / 1000;
-	tv.tv_usec = (to_ms % 1000) * 1000;
-
-	return ssl_send_simple_tv(info, buf, len, &tv, ssl_errno);
-}
-
-int ssl_recv_simple_tv(ssl_info * info, void * buf, int len, struct timeval *tv, int *ssl_errno)
-{
-	int ret;
-
-	fd_set rfds, wfds;
-
-	do{
-		int rlen;
-
-		rlen = ssl_recv_direct(info, buf, len, ssl_errno);
-		if(rlen > 0){
-			return rlen;
-
-		}else if(rlen == SSL_OPS_FAIL){
-			break;
-		}
-
-		FD_ZERO(&rfds);
-		FD_ZERO(&wfds);
-
-		ssl_set_fds(info, 0, &rfds, &wfds);
-		ret = select( info->sk + 1, &rfds, &wfds, 0, tv);
-	
-	}while(ret > 0);
-
-	return 0;
-}
-
-
-int ssl_recv_simple(ssl_info * info, void * buf, int len, int to_ms, int *ssl_errno)
-{
-	struct timeval tv;
-
-	tv.tv_sec = to_ms / 1000;
-	tv.tv_usec = (to_ms % 1000) * 1000;
-
-	return ssl_recv_simple_tv(info, buf, len, &tv, ssl_errno);
-}
-
+#define GEN_SSL_ACTION_SIMPLE(ACTION, FUNC, ...)\
+int ssl_##ACTION##_simple(ssl_info * info, ##__VA_ARGS__, int to_ms, int *ssl_errno)\
+{\
+	struct timeval tv;\
+	\
+	tv.tv_sec = to_ms / 1000;\
+	tv.tv_usec = (to_ms % 1000) * 1000;\
+	\
+	return (FUNC);\
+}\
+/// auto generate ssl_accept_simple()
+GEN_SSL_ACTION_SIMPLE(accept, ssl_accept_simple_tv(info, &tv, ssl_errno));
+/// auto generate ssl_connect_simple()
+GEN_SSL_ACTION_SIMPLE(connect, ssl_connect_simple_tv(info, &tv, ssl_errno));
+/// auto generate ssl_recv_simple()
+GEN_SSL_ACTION_SIMPLE(recv, ssl_recv_simple_tv(info, buf, len, &tv, ssl_errno), void *buf, int len);
+/// auto generate ssl_send_simple()
+GEN_SSL_ACTION_SIMPLE(send, ssl_send_simple_tv(info, buf, len, &tv, ssl_errno), void *buf, int len);
 
 
 #define __handle_flag(INFO, FLAG, IOTYPE, BFIELD) \
@@ -582,6 +450,16 @@ int ssl_recv_simple(ssl_info * info, void * buf, int len, int to_ms, int *ssl_er
 		(BFIELD) |= (invoke_ssl_##FLAG);\
 		}
 
+/** check the fd_set after select()
+* \param[in] info the given ssl_info
+* \param[in] rfds the read fd_set
+* \param[in] wfds the write fd_set
+* \return an int bit mast composed of the following bits
+* - invoke_ssl_send ssl_send_direct() is ready.
+* - invoke_ssl_recv ssl_recv_direct() is ready.
+* - invoke_ssl_connect ssl_connect_direct() is ready.
+* - invoke_ssl_accept ssl_accept_direct() is ready.
+*/
 int ssl_handle_fds(ssl_info * info, 
 			fd_set *rfds, fd_set *wfds)
 {
@@ -611,6 +489,14 @@ int ssl_handle_fds(ssl_info * info,
 }
 
 #define INIT_WAIT_EVENT(INFO, WEVENT)	{(INFO)->WEVENT.read = (INFO)->WEVENT.write = 0;}
+///
+/// the method is used to init ssl_info
+///	- ssl_info.sk is initiated to -1, 
+///	- all events are emptyed.
+///	- the follwing members need manual init
+///	- ssl_info.sk can be created by socket()
+///	- ssl_info.ssl can be created by SSL_new()
+///	- ssl_info.ctx can be created by initialize_ctx()
 ssl_info * sslinfo_alloc(void)
 {
 	ssl_info *info;
