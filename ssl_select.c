@@ -181,13 +181,6 @@ void destroy_ctx(SSL_CTX *ctx)
 	SSL_CTX_free(ctx);
 }
 
-/** set the fd_set for a given ssl_info
-* \param[in] info the ssl_info
-* \param[in] maxfd the current maxfd for select
-* \param[out] rfds the read fd_set *
-* \param[out] wfds the write fd_set *
-* \return the new maxfd
-*/
 int ssl_set_fds(ssl_info *info, 
 	int maxfd, fd_set *rfds, fd_set *wfds)
 {
