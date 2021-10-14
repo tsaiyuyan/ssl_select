@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['connect_0',['connect',['../structssl__info.html#ae887478b8ce1fcf58059b7428efcd647',1,'ssl_info']]],
-  ['ctx_1',['ctx',['../structssl__info.html#a1e6afe83159f33e0c163ed648a883b1a',1,'ssl_info']]]
+  ['accept_0',['accept',['../structssl__info.html#ae9f71698c72a7ec32a362e97fba70066',1,'ssl_info']]]
 ];
