@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['wait_5fevent_0',['wait_event',['../structwait__event.html',1,'']]],
-  ['write_1',['write',['../structwait__event.html#a54e1c47cb6f2c76bbd227d9eb300f0c4',1,'wait_event']]]
+  ['printf_5fflag_0',['printf_flag',['../test_8c.html#a6e05ab8123eb5c5b1d7bd274976ee8d4',1,'test.c']]]
 ];

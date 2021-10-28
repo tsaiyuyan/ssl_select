@@ -1,12 +1,12 @@
 var indexSectionsWithContent =
 {
-  0: "_acdgilrsw",
+  0: "_acdghilmprstw",
   1: "sw",
-  2: "s",
-  3: "_dgis",
-  4: "acdlrsw",
+  2: "st",
+  3: "_dghimst",
+  4: "acdhlrsw",
   5: "s",
-  6: "_gis"
+  6: "_gips"
 };
 
 var indexSectionNames =
