@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['send_0',['send',['../structssl__info.html#aa187071dca6d8a1c694b77f267e8a899',1,'ssl_info']]],
+  ['send_0',['send',['../structssl__info.html#ac6c740c1048d2429487eecdc2abfb63b',1,'ssl_info']]],
   ['simple_5fhttp_5fserver_1',['simple_http_server',['../tests_8c.html#a04ba502f3fb7746bc18b8a12f9c84003',1,'tests.c']]],
   ['simple_5fhttps_5fserver_2',['simple_https_server',['../tests_8c.html#a7c1479d79584da3c02da7c5475dede22',1,'tests.c']]],
-  ['sk_3',['sk',['../structssl__info.html#a4ed863300d98448b3428d36c7c8725fb',1,'ssl_info']]],
-  ['ssl_4',['ssl',['../structssl__info.html#af8ccb691a6943927f333ad781b496f14',1,'ssl_info']]],
+  ['sk_3',['sk',['../structssl__info.html#a603590eee2547ee63c19918de7076b8a',1,'ssl_info']]],
+  ['ssl_4',['ssl',['../structssl__info.html#ae7c0417fa2881f3546920311fee80311',1,'ssl_info']]],
   ['ssl_5faccept_5fdirect_5',['ssl_accept_direct',['../ssl__select_8h.html#a451035eb4c1c998c17db4c87bca3b269',1,'ssl_select.h']]],
   ['ssl_5faccept_5fsimple_6',['ssl_accept_simple',['../ssl__select_8h.html#ad1bc77633dc0c9217b53fa6401e1c2a7',1,'ssl_select.h']]],
   ['ssl_5faccept_5fsimple_5ftv_7',['ssl_accept_simple_tv',['../ssl__select_8h.html#abdbe6ef3784f9d4293d5f6835e37ccee',1,'ssl_select.h']]],

@@ -1,20 +1,45 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
 <title>ssl_select: ssl_info Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
@@ -23,6 +48,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ssl_select
    </div>
+   <div id="projectbrief">Advantech Inc.</div>
   </td>
  </tr>
  </tbody>
@@ -46,6 +72,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('structssl__info.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,7 +103,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
@@ -69,155 +111,162 @@ $(function() {
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="ssl__select_8h_source.html">ssl_select.h</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for ssl_info:</div>
-<div class="dyncontent">
-<div class="center"><img src="structssl__info__coll__graph.png" border="0" usemap="#assl__info_coll__map" alt="Collaboration graph"/></div>
-<map name="assl__info_coll__map" id="assl__info_coll__map">
-<area shape="rect" title=" " alt="" coords="15,139,81,165"/>
-<area shape="rect" href="structwait__event.html" title=" " alt="" coords="5,5,91,32"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a4ed863300d98448b3428d36c7c8725fb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssl__info.html#a4ed863300d98448b3428d36c7c8725fb">sk</a></td></tr>
-<tr class="memdesc:a4ed863300d98448b3428d36c7c8725fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">socket handle  <a href="structssl__info.html#a4ed863300d98448b3428d36c7c8725fb">More...</a><br /></td></tr>
-<tr class="separator:a4ed863300d98448b3428d36c7c8725fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8ccb691a6943927f333ad781b496f14"><td class="memItemLeft" align="right" valign="top">SSL *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssl__info.html#af8ccb691a6943927f333ad781b496f14">ssl</a></td></tr>
-<tr class="memdesc:af8ccb691a6943927f333ad781b496f14"><td class="mdescLeft">&#160;</td><td class="mdescRight">SSL handle.  <a href="structssl__info.html#af8ccb691a6943927f333ad781b496f14">More...</a><br /></td></tr>
-<tr class="separator:af8ccb691a6943927f333ad781b496f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e6afe83159f33e0c163ed648a883b1a"><td class="memItemLeft" align="right" valign="top">SSL_CTX *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssl__info.html#a1e6afe83159f33e0c163ed648a883b1a">ctx</a></td></tr>
-<tr class="memdesc:a1e6afe83159f33e0c163ed648a883b1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">SSL_CTX.  <a href="structssl__info.html#a1e6afe83159f33e0c163ed648a883b1a">More...</a><br /></td></tr>
-<tr class="separator:a1e6afe83159f33e0c163ed648a883b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74e06fe12deae4e2db04d9b9d7708678"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structwait__event.html">wait_event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssl__info.html#a74e06fe12deae4e2db04d9b9d7708678">recv</a></td></tr>
-<tr class="memdesc:a74e06fe12deae4e2db04d9b9d7708678"><td class="mdescLeft">&#160;</td><td class="mdescRight">recv event record  <a href="structssl__info.html#a74e06fe12deae4e2db04d9b9d7708678">More...</a><br /></td></tr>
-<tr class="separator:a74e06fe12deae4e2db04d9b9d7708678"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa187071dca6d8a1c694b77f267e8a899"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structwait__event.html">wait_event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssl__info.html#aa187071dca6d8a1c694b77f267e8a899">send</a></td></tr>
-<tr class="memdesc:aa187071dca6d8a1c694b77f267e8a899"><td class="mdescLeft">&#160;</td><td class="mdescRight">send event record  <a href="structssl__info.html#aa187071dca6d8a1c694b77f267e8a899">More...</a><br /></td></tr>
-<tr class="separator:aa187071dca6d8a1c694b77f267e8a899"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae887478b8ce1fcf58059b7428efcd647"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structwait__event.html">wait_event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssl__info.html#ae887478b8ce1fcf58059b7428efcd647">connect</a></td></tr>
-<tr class="memdesc:ae887478b8ce1fcf58059b7428efcd647"><td class="mdescLeft">&#160;</td><td class="mdescRight">connect event record  <a href="structssl__info.html#ae887478b8ce1fcf58059b7428efcd647">More...</a><br /></td></tr>
-<tr class="separator:ae887478b8ce1fcf58059b7428efcd647"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9f71698c72a7ec32a362e97fba70066"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structwait__event.html">wait_event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssl__info.html#ae9f71698c72a7ec32a362e97fba70066">accept</a></td></tr>
-<tr class="memdesc:ae9f71698c72a7ec32a362e97fba70066"><td class="mdescLeft">&#160;</td><td class="mdescRight">accept event record  <a href="structssl__info.html#ae9f71698c72a7ec32a362e97fba70066">More...</a><br /></td></tr>
-<tr class="separator:ae9f71698c72a7ec32a362e97fba70066"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a603590eee2547ee63c19918de7076b8a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssl__info.html#a603590eee2547ee63c19918de7076b8a">sk</a></td></tr>
+<tr class="memdesc:a603590eee2547ee63c19918de7076b8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">socket handle  <a href="structssl__info.html#a603590eee2547ee63c19918de7076b8a">More...</a><br /></td></tr>
+<tr class="separator:a603590eee2547ee63c19918de7076b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7c0417fa2881f3546920311fee80311"><td class="memItemLeft" align="right" valign="top">SSL *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssl__info.html#ae7c0417fa2881f3546920311fee80311">ssl</a></td></tr>
+<tr class="memdesc:ae7c0417fa2881f3546920311fee80311"><td class="mdescLeft">&#160;</td><td class="mdescRight">SSL handle.  <a href="structssl__info.html#ae7c0417fa2881f3546920311fee80311">More...</a><br /></td></tr>
+<tr class="separator:ae7c0417fa2881f3546920311fee80311"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5433bcc8a463fb4df3ce5912bb11fe3"><td class="memItemLeft" align="right" valign="top">SSL_CTX *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssl__info.html#ad5433bcc8a463fb4df3ce5912bb11fe3">ctx</a></td></tr>
+<tr class="memdesc:ad5433bcc8a463fb4df3ce5912bb11fe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">SSL_CTX.  <a href="structssl__info.html#ad5433bcc8a463fb4df3ce5912bb11fe3">More...</a><br /></td></tr>
+<tr class="separator:ad5433bcc8a463fb4df3ce5912bb11fe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a314aff4851c2fa226484a2fb695054e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structwait__event.html">wait_event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssl__info.html#a314aff4851c2fa226484a2fb695054e4">recv</a></td></tr>
+<tr class="memdesc:a314aff4851c2fa226484a2fb695054e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">recv event record  <a href="structssl__info.html#a314aff4851c2fa226484a2fb695054e4">More...</a><br /></td></tr>
+<tr class="separator:a314aff4851c2fa226484a2fb695054e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6c740c1048d2429487eecdc2abfb63b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structwait__event.html">wait_event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssl__info.html#ac6c740c1048d2429487eecdc2abfb63b">send</a></td></tr>
+<tr class="memdesc:ac6c740c1048d2429487eecdc2abfb63b"><td class="mdescLeft">&#160;</td><td class="mdescRight">send event record  <a href="structssl__info.html#ac6c740c1048d2429487eecdc2abfb63b">More...</a><br /></td></tr>
+<tr class="separator:ac6c740c1048d2429487eecdc2abfb63b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a826677f58090858c4aaffaeae44d7c96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structwait__event.html">wait_event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssl__info.html#a826677f58090858c4aaffaeae44d7c96">connect</a></td></tr>
+<tr class="memdesc:a826677f58090858c4aaffaeae44d7c96"><td class="mdescLeft">&#160;</td><td class="mdescRight">connect event record  <a href="structssl__info.html#a826677f58090858c4aaffaeae44d7c96">More...</a><br /></td></tr>
+<tr class="separator:a826677f58090858c4aaffaeae44d7c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae44756af7733c27940617e4d919488d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structwait__event.html">wait_event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssl__info.html#ae44756af7733c27940617e4d919488d3">accept</a></td></tr>
+<tr class="memdesc:ae44756af7733c27940617e4d919488d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">accept event record  <a href="structssl__info.html#ae44756af7733c27940617e4d919488d3">More...</a><br /></td></tr>
+<tr class="separator:ae44756af7733c27940617e4d919488d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >the contex for SSL_select functions this structure is allocated by <a class="el" href="ssl__select_8c.html#a0c9f6ecec0d085b30e8d50b4d9bee969">sslinfo_alloc()</a> all event records should not be handled maunally, but insteadby the following functions:</p><ul>
 <li><a class="el" href="ssl__select_8c.html#acb09bf8536d7134a3d1fed2502613bca">ssl_set_fds()</a></li>
 <li><a class="el" href="ssl__select_8c.html#aeab15894c2d8c48e436111b4ee66b54e">ssl_handle_fds()</a> </li>
 </ul>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testc_8c-example.html#_a3">testc.c</a>, and <a class="el" href="tests_8c-example.html#_a3">tests.c</a>.</dd>
+</dl>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a id="ae9f71698c72a7ec32a362e97fba70066" name="ae9f71698c72a7ec32a362e97fba70066"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9f71698c72a7ec32a362e97fba70066">&#9670;&nbsp;</a></span>accept</h2>
+<a id="ae44756af7733c27940617e4d919488d3" name="ae44756af7733c27940617e4d919488d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae44756af7733c27940617e4d919488d3">&#9670;&nbsp;</a></span>accept</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structwait__event.html">wait_event</a> ssl_info::accept</td>
+          <td class="memname"><a class="el" href="structwait__event.html">wait_event</a> accept</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>accept event record </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testc_8c-example.html#a16">testc.c</a>.</dd>
+</dl>
 
 </div>
 </div>
-<a id="ae887478b8ce1fcf58059b7428efcd647" name="ae887478b8ce1fcf58059b7428efcd647"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae887478b8ce1fcf58059b7428efcd647">&#9670;&nbsp;</a></span>connect</h2>
+<a id="a826677f58090858c4aaffaeae44d7c96" name="a826677f58090858c4aaffaeae44d7c96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a826677f58090858c4aaffaeae44d7c96">&#9670;&nbsp;</a></span>connect</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structwait__event.html">wait_event</a> ssl_info::connect</td>
+          <td class="memname"><a class="el" href="structwait__event.html">wait_event</a> connect</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>connect event record </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testc_8c-example.html#a17">testc.c</a>.</dd>
+</dl>
 
 </div>
 </div>
-<a id="a1e6afe83159f33e0c163ed648a883b1a" name="a1e6afe83159f33e0c163ed648a883b1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e6afe83159f33e0c163ed648a883b1a">&#9670;&nbsp;</a></span>ctx</h2>
+<a id="ad5433bcc8a463fb4df3ce5912bb11fe3" name="ad5433bcc8a463fb4df3ce5912bb11fe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5433bcc8a463fb4df3ce5912bb11fe3">&#9670;&nbsp;</a></span>ctx</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">SSL_CTX* ssl_info::ctx</td>
+          <td class="memname">SSL_CTX* ctx</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>SSL_CTX. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testc_8c-example.html#a7">testc.c</a>, and <a class="el" href="tests_8c-example.html#a7">tests.c</a>.</dd>
+</dl>
 
 </div>
 </div>
-<a id="a74e06fe12deae4e2db04d9b9d7708678" name="a74e06fe12deae4e2db04d9b9d7708678"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74e06fe12deae4e2db04d9b9d7708678">&#9670;&nbsp;</a></span>recv</h2>
+<a id="a314aff4851c2fa226484a2fb695054e4" name="a314aff4851c2fa226484a2fb695054e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a314aff4851c2fa226484a2fb695054e4">&#9670;&nbsp;</a></span>recv</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structwait__event.html">wait_event</a> ssl_info::recv</td>
+          <td class="memname"><a class="el" href="structwait__event.html">wait_event</a> recv</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>recv event record </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testc_8c-example.html#a19">testc.c</a>.</dd>
+</dl>
 
 </div>
 </div>
-<a id="aa187071dca6d8a1c694b77f267e8a899" name="aa187071dca6d8a1c694b77f267e8a899"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa187071dca6d8a1c694b77f267e8a899">&#9670;&nbsp;</a></span>send</h2>
+<a id="ac6c740c1048d2429487eecdc2abfb63b" name="ac6c740c1048d2429487eecdc2abfb63b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6c740c1048d2429487eecdc2abfb63b">&#9670;&nbsp;</a></span>send</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structwait__event.html">wait_event</a> ssl_info::send</td>
+          <td class="memname"><a class="el" href="structwait__event.html">wait_event</a> send</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>send event record </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testc_8c-example.html#a18">testc.c</a>.</dd>
+</dl>
 
 </div>
 </div>
-<a id="a4ed863300d98448b3428d36c7c8725fb" name="a4ed863300d98448b3428d36c7c8725fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ed863300d98448b3428d36c7c8725fb">&#9670;&nbsp;</a></span>sk</h2>
+<a id="a603590eee2547ee63c19918de7076b8a" name="a603590eee2547ee63c19918de7076b8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a603590eee2547ee63c19918de7076b8a">&#9670;&nbsp;</a></span>sk</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int ssl_info::sk</td>
+          <td class="memname">int sk</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>socket handle </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testc_8c-example.html#a6">testc.c</a>, and <a class="el" href="tests_8c-example.html#a6">tests.c</a>.</dd>
+</dl>
 
 </div>
 </div>
-<a id="af8ccb691a6943927f333ad781b496f14" name="af8ccb691a6943927f333ad781b496f14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8ccb691a6943927f333ad781b496f14">&#9670;&nbsp;</a></span>ssl</h2>
+<a id="ae7c0417fa2881f3546920311fee80311" name="ae7c0417fa2881f3546920311fee80311"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7c0417fa2881f3546920311fee80311">&#9670;&nbsp;</a></span>ssl</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">SSL* ssl_info::ssl</td>
+          <td class="memname">SSL* ssl</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>SSL handle. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testc_8c-example.html#a8">testc.c</a>, and <a class="el" href="tests_8c-example.html#a9">tests.c</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -225,9 +274,26 @@ Data Fields</h2></td></tr>
 <li><a class="el" href="ssl__select_8h_source.html">ssl_select.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structssl__info.html">ssl_info</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
 </body>
 </html>
