@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ssl_select: test.c File Reference</title>
+<title>ssl_select: example/testc.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -60,73 +60,87 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cfafba98a580ce4b62f8a6fa96d7cbb0.html">example</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
-  <div class="headertitle"><div class="title">test.c File Reference</div></div>
+  <div class="headertitle"><div class="title">testc.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &lt;netdb.h&gt;</code><br />
-<code>#include &lt;fcntl.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;arpa/inet.h&gt;</code><br />
 <code>#include &lt;error.h&gt;</code><br />
-<code>#include &lt;string.h&gt;</code><br />
-<code>#include &lt;unistd.h&gt;</code><br />
-<code>#include &lt;sys/socket.h&gt;</code><br />
-<code>#include &lt;sys/time.h&gt;</code><br />
+<code>#include &lt;fcntl.h&gt;</code><br />
+<code>#include &lt;limits.h&gt;</code><br />
+<code>#include &lt;netdb.h&gt;</code><br />
+<code>#include &lt;netinet/in.h&gt;</code><br />
 <code>#include &lt;netinet/tcp.h&gt;</code><br />
-<code>#include &lt;arpa/inet.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;sys/socket.h&gt;</code><br />
+<code>#include &lt;sys/stat.h&gt;</code><br />
+<code>#include &lt;sys/time.h&gt;</code><br />
+<code>#include &lt;sys/types.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="ssl__select_8h_source.html">ssl_select.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for test.c:</div>
+Include dependency graph for testc.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="test_8c__incl.png" border="0" usemap="#atest_8c" alt=""/></div>
-<map name="atest_8c" id="atest_8c">
-<area shape="rect" title=" " alt="" coords="479,5,533,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,65,107"/>
-<area shape="rect" title=" " alt="" coords="89,80,152,107"/>
-<area shape="rect" title=" " alt="" coords="177,80,241,107"/>
-<area shape="rect" title=" " alt="" coords="265,80,323,107"/>
-<area shape="rect" title=" " alt="" coords="347,80,406,107"/>
-<area shape="rect" title=" " alt="" coords="430,80,494,107"/>
-<area shape="rect" title=" " alt="" coords="518,80,585,107"/>
-<area shape="rect" title=" " alt="" coords="609,80,704,107"/>
-<area shape="rect" title=" " alt="" coords="728,80,809,107"/>
-<area shape="rect" title=" " alt="" coords="834,80,927,107"/>
-<area shape="rect" title=" " alt="" coords="951,80,1034,107"/>
-<area shape="rect" href="ssl__select_8h.html" title=" " alt="" coords="1058,80,1149,107"/>
-<area shape="rect" title=" " alt="" coords="993,155,1091,181"/>
-<area shape="rect" title=" " alt="" coords="1115,155,1211,181"/>
+<div class="center"><img src="testc_8c__incl.png" border="0" usemap="#aexample_2testc_8c" alt=""/></div>
+<map name="aexample_2testc_8c" id="aexample_2testc_8c">
+<area shape="rect" title=" " alt="" coords="695,5,809,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,88,107"/>
+<area shape="rect" title=" " alt="" coords="112,80,171,107"/>
+<area shape="rect" title=" " alt="" coords="195,80,253,107"/>
+<area shape="rect" title=" " alt="" coords="277,80,339,107"/>
+<area shape="rect" title=" " alt="" coords="364,80,428,107"/>
+<area shape="rect" title=" " alt="" coords="452,80,537,107"/>
+<area shape="rect" title=" " alt="" coords="561,80,655,107"/>
+<area shape="rect" title=" " alt="" coords="679,80,739,107"/>
+<area shape="rect" title=" " alt="" coords="763,80,826,107"/>
+<area shape="rect" title=" " alt="" coords="851,80,915,107"/>
+<area shape="rect" title=" " alt="" coords="939,80,1034,107"/>
+<area shape="rect" title=" " alt="" coords="1058,80,1137,107"/>
+<area shape="rect" title=" " alt="" coords="1161,80,1242,107"/>
+<area shape="rect" title=" " alt="" coords="1266,80,1353,107"/>
+<area shape="rect" title=" " alt="" coords="1377,80,1444,107"/>
+<area shape="rect" href="ssl__select_8h.html" title=" " alt="" coords="1468,80,1559,107"/>
+<area shape="rect" title=" " alt="" coords="1403,155,1501,181"/>
+<area shape="rect" title=" " alt="" coords="1525,155,1621,181"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a6e05ab8123eb5c5b1d7bd274976ee8d4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#a6e05ab8123eb5c5b1d7bd274976ee8d4">printf_flag</a>(obj)&#160;&#160;&#160;printf(#obj &quot;r:%d w:%d\n&quot;,obj.read,obj.write)</td></tr>
+<tr class="memitem:a33abe210666ac23cd667458558e93a43"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testc_8c.html#a33abe210666ac23cd667458558e93a43">ssl_perror</a>(tag)</td></tr>
+<tr class="separator:a33abe210666ac23cd667458558e93a43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e05ab8123eb5c5b1d7bd274976ee8d4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testc_8c.html#a6e05ab8123eb5c5b1d7bd274976ee8d4">printf_flag</a>(obj)&#160;&#160;&#160;printf(#obj &quot;r: %d, w: %d\n&quot;, obj.read, obj.write)</td></tr>
 <tr class="separator:a6e05ab8123eb5c5b1d7bd274976ee8d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0d5e428ead5875e99663a6bb673fa0a8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#a0d5e428ead5875e99663a6bb673fa0a8">hostname_to_ip</a> (char *hostname, char *ip)</td></tr>
+<tr class="memitem:a0d5e428ead5875e99663a6bb673fa0a8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testc_8c.html#a0d5e428ead5875e99663a6bb673fa0a8">hostname_to_ip</a> (char *hostname, char *ip)</td></tr>
 <tr class="separator:a0d5e428ead5875e99663a6bb673fa0a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fa64553c7699f1d16f5f5277a212dad"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#a3fa64553c7699f1d16f5f5277a212dad">tcp_connect</a> (char *addr, char *port)</td></tr>
+<tr class="memitem:a3fa64553c7699f1d16f5f5277a212dad"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testc_8c.html#a3fa64553c7699f1d16f5f5277a212dad">tcp_connect</a> (char *addr, char *port)</td></tr>
 <tr class="separator:a3fa64553c7699f1d16f5f5277a212dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61f53a7db22cf8e507962e872be79a24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structssl__info.html">ssl_info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#a61f53a7db22cf8e507962e872be79a24">ssl_connect</a> (int sk)</td></tr>
+<tr class="memitem:a61f53a7db22cf8e507962e872be79a24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structssl__info.html">ssl_info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testc_8c.html#a61f53a7db22cf8e507962e872be79a24">ssl_connect</a> (int sk)</td></tr>
 <tr class="separator:a61f53a7db22cf8e507962e872be79a24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7952d415e4870feb5e6752db26c5b2ad"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#a7952d415e4870feb5e6752db26c5b2ad">ssl_nonblocking_test</a> (int sk)</td></tr>
+<tr class="memitem:a7952d415e4870feb5e6752db26c5b2ad"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testc_8c.html#a7952d415e4870feb5e6752db26c5b2ad">ssl_nonblocking_test</a> (int sk)</td></tr>
 <tr class="separator:a7952d415e4870feb5e6752db26c5b2ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37ed8cb14f8054d47f8d9720a4275311"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#a37ed8cb14f8054d47f8d9720a4275311">ssl_blocking_test</a> (int sk)</td></tr>
+<tr class="memitem:a37ed8cb14f8054d47f8d9720a4275311"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testc_8c.html#a37ed8cb14f8054d47f8d9720a4275311">ssl_blocking_test</a> (int sk)</td></tr>
 <tr class="separator:a37ed8cb14f8054d47f8d9720a4275311"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testc_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
 <tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aad6e5cb6faf3b6bbf30d96e6d8827408"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#aad6e5cb6faf3b6bbf30d96e6d8827408">http_req</a> = &quot;GET / HTTP/1.0\r\n\r\n&quot;</td></tr>
+<tr class="memitem:aad6e5cb6faf3b6bbf30d96e6d8827408"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testc_8c.html#aad6e5cb6faf3b6bbf30d96e6d8827408">http_req</a> = &quot;GET / HTTP/1.0\r\n\r\n&quot;</td></tr>
 <tr class="separator:aad6e5cb6faf3b6bbf30d96e6d8827408"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -141,11 +155,33 @@ Variables</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">obj</td><td>)</td>
-          <td>&#160;&#160;&#160;printf(#obj &quot;r:%d w:%d\n&quot;,obj.read,obj.write)</td>
+          <td>&#160;&#160;&#160;printf(#obj &quot;r: %d, w: %d\n&quot;, obj.read, obj.write)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+</div>
+</div>
+<a id="a33abe210666ac23cd667458558e93a43" name="a33abe210666ac23cd667458558e93a43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33abe210666ac23cd667458558e93a43">&#9670;&nbsp;</a></span>ssl_perror</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ssl_perror</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">tag</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> {                                                                \</div>
+<div class="line">        ssl_errno_str(_ssl, ssl_errno, ssl_errstr, <span class="keyword">sizeof</span>(ssl_errstr)); \</div>
+<div class="line">        printf(tag <span class="stringliteral">&quot;: %s\n&quot;</span>, ssl_errstr);                               \</div>
+<div class="line">    } <span class="keywordflow">while</span> (0)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
