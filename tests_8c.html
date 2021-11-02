@@ -136,6 +136,8 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a3bdec78989621269befbf2063e4fb296"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8c.html#a3bdec78989621269befbf2063e4fb296">global_ssl_init</a> ()</td></tr>
+<tr class="separator:a3bdec78989621269befbf2063e4fb296"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd5be76af27804354be0a61eac006fa5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8c.html#acd5be76af27804354be0a61eac006fa5">start_tcp_server</a> (const char *port)</td></tr>
 <tr class="separator:acd5be76af27804354be0a61eac006fa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8101a8f39603855c5e164567663f836"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structssl__info.html">ssl_info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8c.html#af8101a8f39603855c5e164567663f836">tls_accept</a> (int sk)</td></tr>
@@ -164,7 +166,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="tests_8c-example.html#a20">tests.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="tests_8c-example.html#a21">tests.c</a>.</dd>
 </dl>
 
 </div>
@@ -180,7 +182,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="tests_8c-example.html#a14">tests.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="tests_8c-example.html#a15">tests.c</a>.</dd>
 </dl>
 
 </div>
@@ -204,12 +206,31 @@ Variables</h2></td></tr>
 <div class="line">        ssl_errno_str(_ssl, ssl_errno, ssl_errstr, <span class="keyword">sizeof</span>(ssl_errstr)); \</div>
 <div class="line">        printf(tag <span class="stringliteral">&quot;: %s\n&quot;</span>, ssl_errstr);                               \</div>
 <div class="line">    } <span class="keywordflow">while</span> (0)</div>
-</div><!-- fragment --><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="tests_8c-example.html#a11">tests.c</a>.</dd>
+</div><!-- fragment --><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="tests_8c-example.html#a13">tests.c</a>.</dd>
 </dl>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a3bdec78989621269befbf2063e4fb296" name="a3bdec78989621269befbf2063e4fb296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bdec78989621269befbf2063e4fb296">&#9670;&nbsp;</a></span>global_ssl_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int global_ssl_init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="tests_8c-example.html#a2">tests.c</a>.</dd>
+</dl>
+
+</div>
+</div>
 <a id="aefc00cbac28210cf9a6d0050ca8ce2eb" name="aefc00cbac28210cf9a6d0050ca8ce2eb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aefc00cbac28210cf9a6d0050ca8ce2eb">&#9670;&nbsp;</a></span>main()</h2>
 
@@ -235,7 +256,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="tests_8c-example.html#a21">tests.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="tests_8c-example.html#a22">tests.c</a>.</dd>
 </dl>
 
 </div>
@@ -254,7 +275,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="tests_8c-example.html#a19">tests.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="tests_8c-example.html#a20">tests.c</a>.</dd>
 </dl>
 
 </div>
@@ -273,7 +294,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="tests_8c-example.html#a12">tests.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="tests_8c-example.html#a14">tests.c</a>.</dd>
 </dl>
 
 </div>
@@ -293,7 +314,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="tests_8c-example.html#a1">tests.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="tests_8c-example.html#a5">tests.c</a>.</dd>
 </dl>
 
 </div>
@@ -313,7 +334,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="tests_8c-example.html#a4">tests.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="tests_8c-example.html#a7">tests.c</a>.</dd>
 </dl>
 
 </div>
