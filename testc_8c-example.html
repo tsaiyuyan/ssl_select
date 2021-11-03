@@ -235,13 +235,14 @@ $(document).ready(function(){initNavTree('testc_8c-example.html',''); initResiza
 <div class="line">{</div>
 <div class="line">    <span class="keywordflow">if</span> (sk &lt; 0)</div>
 <div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line"> </div>
 <div class="line">    <a id="a12" name="a12"></a><a class="code hl_function" href="ssl__select_8c.html#ac028f0fe56a41df2980a4a031d3d0e80">__set_block</a>(sk);</div>
 <div class="line">    <a class="code hl_struct" href="structssl__info.html">ssl_info</a>* _ssl = <a class="code hl_function" href="testc_8c.html#a61f53a7db22cf8e507962e872be79a24">ssl_connect</a>(sk);</div>
 <div class="line">    <span class="keywordflow">if</span> (!_ssl)</div>
 <div class="line">        <span class="keywordflow">return</span> -2;</div>
 <div class="line">    <a id="a13" name="a13"></a><a class="code hl_function" href="ssl__select_8c.html#a400be6c1caebc96bf5b2204f36c4eb81">__set_nonblock</a>(sk);</div>
-<div class="line">    <span class="keywordtype">int</span> cnt = 0;</div>
 <div class="line"> </div>
+<div class="line">    <span class="keywordtype">int</span> cnt = 0;</div>
 <div class="line">    <span class="keywordtype">int</span> ssl_errno;</div>
 <div class="line">    <span class="keywordtype">char</span> ssl_errstr[256];</div>
 <div class="line">    <span class="keywordflow">do</span> {</div>
@@ -304,7 +305,7 @@ $(document).ready(function(){initNavTree('testc_8c-example.html',''); initResiza
 <div class="line"><span class="preprocessor">#ifdef PRINTF_RECV_BUF</span></div>
 <div class="line">                printf(<span class="stringliteral">&quot;%s&quot;</span>, recv_buf);</div>
 <div class="line"><span class="preprocessor">#else</span></div>
-<div class="line">                printf(<span class="stringliteral">&quot;recv1(%d)\n&quot;</span>, len);</div>
+<div class="line">                printf(<span class="stringliteral">&quot;recv(%d)\n&quot;</span>, len);</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line">                cnt += len;</div>
 <div class="line">            }</div>
@@ -322,7 +323,6 @@ $(document).ready(function(){initNavTree('testc_8c-example.html',''); initResiza
 <div class="line">        <span class="keywordflow">return</span> -1;</div>
 <div class="line"> </div>
 <div class="line">    <a class="code hl_function" href="ssl__select_8c.html#ac028f0fe56a41df2980a4a031d3d0e80">__set_block</a>(sk);</div>
-<div class="line"> </div>
 <div class="line">    <a class="code hl_struct" href="structssl__info.html">ssl_info</a>* _ssl = <a class="code hl_function" href="testc_8c.html#a61f53a7db22cf8e507962e872be79a24">ssl_connect</a>(sk);</div>
 <div class="line">    <span class="keywordflow">if</span> (!_ssl)</div>
 <div class="line">        <span class="keywordflow">return</span> -2;</div>
@@ -346,6 +346,8 @@ $(document).ready(function(){initNavTree('testc_8c-example.html',''); initResiza
 <div class="line">                recv_buf[len] = 0;</div>
 <div class="line"><span class="preprocessor">#ifdef PRINTF_RECV_BUF</span></div>
 <div class="line">                printf(<span class="stringliteral">&quot;%s&quot;</span>, recv_buf);</div>
+<div class="line"><span class="preprocessor">#else</span></div>
+<div class="line">                printf(<span class="stringliteral">&quot;recv(%d)\n&quot;</span>,len);</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line">                cnt += len;</div>
 <div class="line">            } <span class="keywordflow">else</span> {</div>
@@ -386,7 +388,7 @@ $(document).ready(function(){initNavTree('testc_8c-example.html',''); initResiza
 <div class="line">    ret = <a class="code hl_function" href="testc_8c.html#a7952d415e4870feb5e6752db26c5b2ad">ssl_nonblocking_test</a>(<a class="code hl_function" href="testc_8c.html#a3fa64553c7699f1d16f5f5277a212dad">tcp_connect</a>(ip, <span class="stringliteral">&quot;443&quot;</span>));</div>
 <div class="line">    printf(<span class="stringliteral">&quot;https_nbk_test, total_len = %d\n&quot;</span>, ret);</div>
 <div class="line"> </div>
-<div class="line">    printf(<span class="stringliteral">&quot;======= ssl_blocking ==========\n&quot;</span>);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;\n======= ssl_blocking ==========\n&quot;</span>);</div>
 <div class="line">    ret = <a class="code hl_function" href="testc_8c.html#a37ed8cb14f8054d47f8d9720a4275311">ssl_blocking_test</a>(<a class="code hl_function" href="testc_8c.html#a3fa64553c7699f1d16f5f5277a212dad">tcp_connect</a>(ip, <span class="stringliteral">&quot;443&quot;</span>));</div>
 <div class="line">    printf(<span class="stringliteral">&quot;https_bk_test, total_len = %d\n&quot;</span>, ret);</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
@@ -412,9 +414,9 @@ $(document).ready(function(){initNavTree('testc_8c-example.html',''); initResiza
 <div class="ttc" id="astructssl__info_html_ae44756af7733c27940617e4d919488d3"><div class="ttname"><a href="structssl__info.html#ae44756af7733c27940617e4d919488d3">ssl_info::accept</a></div><div class="ttdeci">wait_event accept</div><div class="ttdoc">accept event record</div><div class="ttdef"><b>Definition:</b> ssl_select.h:34</div></div>
 <div class="ttc" id="astructssl__info_html_ae7c0417fa2881f3546920311fee80311"><div class="ttname"><a href="structssl__info.html#ae7c0417fa2881f3546920311fee80311">ssl_info::ssl</a></div><div class="ttdeci">SSL * ssl</div><div class="ttdoc">SSL handle.</div><div class="ttdef"><b>Definition:</b> ssl_select.h:29</div></div>
 <div class="ttc" id="atestc_8c_html_a0d5e428ead5875e99663a6bb673fa0a8"><div class="ttname"><a href="testc_8c.html#a0d5e428ead5875e99663a6bb673fa0a8">hostname_to_ip</a></div><div class="ttdeci">int hostname_to_ip(char *hostname, char *ip)</div><div class="ttdef"><b>Definition:</b> testc.c:24</div></div>
-<div class="ttc" id="atestc_8c_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="testc_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> testc.c:256</div></div>
+<div class="ttc" id="atestc_8c_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="testc_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> testc.c:258</div></div>
 <div class="ttc" id="atestc_8c_html_a33abe210666ac23cd667458558e93a43"><div class="ttname"><a href="testc_8c.html#a33abe210666ac23cd667458558e93a43">ssl_perror</a></div><div class="ttdeci">#define ssl_perror(tag)</div><div class="ttdef"><b>Definition:</b> testc.c:89</div></div>
-<div class="ttc" id="atestc_8c_html_a37ed8cb14f8054d47f8d9720a4275311"><div class="ttname"><a href="testc_8c.html#a37ed8cb14f8054d47f8d9720a4275311">ssl_blocking_test</a></div><div class="ttdeci">int ssl_blocking_test(int sk)</div><div class="ttdef"><b>Definition:</b> testc.c:212</div></div>
+<div class="ttc" id="atestc_8c_html_a37ed8cb14f8054d47f8d9720a4275311"><div class="ttname"><a href="testc_8c.html#a37ed8cb14f8054d47f8d9720a4275311">ssl_blocking_test</a></div><div class="ttdeci">int ssl_blocking_test(int sk)</div><div class="ttdef"><b>Definition:</b> testc.c:213</div></div>
 <div class="ttc" id="atestc_8c_html_a3fa64553c7699f1d16f5f5277a212dad"><div class="ttname"><a href="testc_8c.html#a3fa64553c7699f1d16f5f5277a212dad">tcp_connect</a></div><div class="ttdeci">int tcp_connect(char *addr, char *port)</div><div class="ttdef"><b>Definition:</b> testc.c:45</div></div>
 <div class="ttc" id="atestc_8c_html_a61f53a7db22cf8e507962e872be79a24"><div class="ttname"><a href="testc_8c.html#a61f53a7db22cf8e507962e872be79a24">ssl_connect</a></div><div class="ttdeci">ssl_info * ssl_connect(int sk)</div><div class="ttdef"><b>Definition:</b> testc.c:95</div></div>
 <div class="ttc" id="atestc_8c_html_a6e05ab8123eb5c5b1d7bd274976ee8d4"><div class="ttname"><a href="testc_8c.html#a6e05ab8123eb5c5b1d7bd274976ee8d4">printf_flag</a></div><div class="ttdeci">#define printf_flag(obj)</div></div>
