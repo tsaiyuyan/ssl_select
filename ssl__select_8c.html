@@ -140,7 +140,9 @@ $(document).ready(function(){initNavTree('ssl__select_8c.html',''); initResizabl
 <code>#include &lt;sys/mman.h&gt;</code><br />
 <code>#include &lt;linux/limits.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="ssl__select_8h_source.html">ssl_select.h</a>&quot;</code><br />
-</div><table class="memberdecls">
+</div>
+<p><a href="ssl__select_8c_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a369266c24eacffb87046522897a570d5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#a369266c24eacffb87046522897a570d5">_GNU_SOURCE</a></td></tr>
@@ -174,34 +176,34 @@ Functions</h2></td></tr>
 <tr class="separator:a400be6c1caebc96bf5b2204f36c4eb81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54e11373d34ff9699a5c947fef26bc32"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#a54e11373d34ff9699a5c947fef26bc32">ssl_errno_str</a> (<a class="el" href="structssl__info.html">ssl_info</a> *info, int ssl_errno, char *buf, int buflen)</td></tr>
 <tr class="separator:a54e11373d34ff9699a5c947fef26bc32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab874553272858d29cea3cb68eedc2e47"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#ab874553272858d29cea3cb68eedc2e47">GEN_SSL_ACTION_DIRECT</a> (accept, SSL_accept(info-&gt;ssl), ret==1)</td></tr>
-<tr class="separator:ab874553272858d29cea3cb68eedc2e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfe93ac4ffc43bbd1151285c9d54c7a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#acfe93ac4ffc43bbd1151285c9d54c7a1">GEN_SSL_ACTION_DIRECT</a> (connect, SSL_connect(info-&gt;ssl), ret==1)</td></tr>
-<tr class="separator:acfe93ac4ffc43bbd1151285c9d54c7a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc778870375005d84a6b41cf2d5e9687"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#adc778870375005d84a6b41cf2d5e9687">GEN_SSL_ACTION_DIRECT</a> (recv, SSL_read(info-&gt;ssl, buf, len), ret &gt; 0, void *buf, int len)</td></tr>
-<tr class="separator:adc778870375005d84a6b41cf2d5e9687"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe3f67f4e845d45869734e0609c24c6b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#abe3f67f4e845d45869734e0609c24c6b">GEN_SSL_ACTION_DIRECT</a> (send, SSL_write(info-&gt;ssl, buf, len), ret &gt; 0, void *buf, int len)</td></tr>
-<tr class="separator:abe3f67f4e845d45869734e0609c24c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7747f8c6e815109d7762ba86134c031"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#ac7747f8c6e815109d7762ba86134c031">GEN_SSL_ACTION_SIMPLE_TV</a> (accept, <a class="el" href="ssl__select_8h.html#a451035eb4c1c998c17db4c87bca3b269">ssl_accept_direct</a>(info, ssl_errno), ret==1)</td></tr>
-<tr class="separator:ac7747f8c6e815109d7762ba86134c031"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac81e4d1f6df37edb3e24e4f3b70f178a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#ac81e4d1f6df37edb3e24e4f3b70f178a">GEN_SSL_ACTION_SIMPLE_TV</a> (connect, <a class="el" href="ssl__select_8h.html#a19f30823d1414006cd41ed4c4c37b652">ssl_connect_direct</a>(info, ssl_errno), ret==1)</td></tr>
-<tr class="separator:ac81e4d1f6df37edb3e24e4f3b70f178a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5561853fa6eacad58e814d7aa07aee5f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#a5561853fa6eacad58e814d7aa07aee5f">GEN_SSL_ACTION_SIMPLE_TV</a> (recv, <a class="el" href="ssl__select_8h.html#a1250288d07947f8c7f2fc4461db11f2e">ssl_recv_direct</a>(info, buf, len, ssl_errno), ret &gt; 0, void *buf, int len)</td></tr>
-<tr class="separator:a5561853fa6eacad58e814d7aa07aee5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab3a69cbf5ed032541b7e3d217af564d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#aab3a69cbf5ed032541b7e3d217af564d">GEN_SSL_ACTION_SIMPLE_TV</a> (send, <a class="el" href="ssl__select_8h.html#a662b6d58d9bdce2d4ddaec38633d0c3f">ssl_send_direct</a>(info, buf, len, ssl_errno), ret &gt; 0, void *buf, int len)</td></tr>
-<tr class="separator:aab3a69cbf5ed032541b7e3d217af564d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac855aefa20541eb976ea7a5cb9915fee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#ac855aefa20541eb976ea7a5cb9915fee">GEN_SSL_ACTION_SIMPLE</a> (accept, <a class="el" href="ssl__select_8h.html#abdbe6ef3784f9d4293d5f6835e37ccee">ssl_accept_simple_tv</a>(info, &amp;tv, ssl_errno))</td></tr>
-<tr class="memdesc:ac855aefa20541eb976ea7a5cb9915fee"><td class="mdescLeft">&#160;</td><td class="mdescRight">auto generate <a class="el" href="ssl__select_8h.html#ad1bc77633dc0c9217b53fa6401e1c2a7">ssl_accept_simple()</a>  <a href="ssl__select_8c.html#ac855aefa20541eb976ea7a5cb9915fee">More...</a><br /></td></tr>
-<tr class="separator:ac855aefa20541eb976ea7a5cb9915fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c4204c5e94aa8c364e2e40cf337eb88"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#a6c4204c5e94aa8c364e2e40cf337eb88">GEN_SSL_ACTION_SIMPLE</a> (connect, <a class="el" href="ssl__select_8h.html#aa49585b84cafef202553b608e2ff5cce">ssl_connect_simple_tv</a>(info, &amp;tv, ssl_errno))</td></tr>
-<tr class="memdesc:a6c4204c5e94aa8c364e2e40cf337eb88"><td class="mdescLeft">&#160;</td><td class="mdescRight">auto generate <a class="el" href="ssl__select_8h.html#a31acd08ff4c9971f53c75ba5a6287473">ssl_connect_simple()</a>  <a href="ssl__select_8c.html#a6c4204c5e94aa8c364e2e40cf337eb88">More...</a><br /></td></tr>
-<tr class="separator:a6c4204c5e94aa8c364e2e40cf337eb88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a805efd10eee8f8f338834c204d709960"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#a805efd10eee8f8f338834c204d709960">GEN_SSL_ACTION_SIMPLE</a> (recv, <a class="el" href="ssl__select_8h.html#aedb58e27c8b61741fe4a5775ad9ee588">ssl_recv_simple_tv</a>(info, buf, len, &amp;tv, ssl_errno), void *buf, int len)</td></tr>
-<tr class="memdesc:a805efd10eee8f8f338834c204d709960"><td class="mdescLeft">&#160;</td><td class="mdescRight">auto generate <a class="el" href="ssl__select_8h.html#a043988dfdcea5c8bf18f1fbe14aafccb">ssl_recv_simple()</a>  <a href="ssl__select_8c.html#a805efd10eee8f8f338834c204d709960">More...</a><br /></td></tr>
-<tr class="separator:a805efd10eee8f8f338834c204d709960"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76638d5f3795f23212182662cf38bca6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#a76638d5f3795f23212182662cf38bca6">GEN_SSL_ACTION_SIMPLE</a> (send, <a class="el" href="ssl__select_8h.html#ab48fabc7040bc99b36de362aa4d7b229">ssl_send_simple_tv</a>(info, buf, len, &amp;tv, ssl_errno), void *buf, int len)</td></tr>
-<tr class="memdesc:a76638d5f3795f23212182662cf38bca6"><td class="mdescLeft">&#160;</td><td class="mdescRight">auto generate <a class="el" href="ssl__select_8h.html#a98b224417f1ee25b242b8503377d42a7">ssl_send_simple()</a>  <a href="ssl__select_8c.html#a76638d5f3795f23212182662cf38bca6">More...</a><br /></td></tr>
-<tr class="separator:a76638d5f3795f23212182662cf38bca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2e0978d1aabe2d3946638c77968ae73"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#ae2e0978d1aabe2d3946638c77968ae73">ssl_accept_direct</a> (<a class="el" href="structssl__info.html">ssl_info</a> *info,, int *r_errno)</td></tr>
+<tr class="separator:ae2e0978d1aabe2d3946638c77968ae73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86c9b0278fc9f9b64226f8dd433b351b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#a86c9b0278fc9f9b64226f8dd433b351b">ssl_connect_direct</a> (<a class="el" href="structssl__info.html">ssl_info</a> *info,, int *r_errno)</td></tr>
+<tr class="separator:a86c9b0278fc9f9b64226f8dd433b351b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab30f249650317ef85a2fdc56996dbd9b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#ab30f249650317ef85a2fdc56996dbd9b">ssl_recv_direct</a> (<a class="el" href="structssl__info.html">ssl_info</a> *info, void *buf, int len, int *r_errno)</td></tr>
+<tr class="separator:ab30f249650317ef85a2fdc56996dbd9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4dc4e37cd5dec7990b6bf6645360f9a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#aa4dc4e37cd5dec7990b6bf6645360f9a">ssl_send_direct</a> (<a class="el" href="structssl__info.html">ssl_info</a> *info, void *buf, int len, int *r_errno)</td></tr>
+<tr class="separator:aa4dc4e37cd5dec7990b6bf6645360f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dc1491fa45e05c562f3e4d1292a91dc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#a0dc1491fa45e05c562f3e4d1292a91dc">ssl_accept_simple_tv</a> (<a class="el" href="structssl__info.html">ssl_info</a> *info,, struct timeval *tv, int *ssl_errno)</td></tr>
+<tr class="separator:a0dc1491fa45e05c562f3e4d1292a91dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54f3b9df81771774ed87283765367d57"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#a54f3b9df81771774ed87283765367d57">ssl_connect_simple_tv</a> (<a class="el" href="structssl__info.html">ssl_info</a> *info,, struct timeval *tv, int *ssl_errno)</td></tr>
+<tr class="separator:a54f3b9df81771774ed87283765367d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedb58e27c8b61741fe4a5775ad9ee588"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#aedb58e27c8b61741fe4a5775ad9ee588">ssl_recv_simple_tv</a> (<a class="el" href="structssl__info.html">ssl_info</a> *info, void *buf, int len, struct timeval *tv, int *ssl_errno)</td></tr>
+<tr class="separator:aedb58e27c8b61741fe4a5775ad9ee588"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab48fabc7040bc99b36de362aa4d7b229"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#ab48fabc7040bc99b36de362aa4d7b229">ssl_send_simple_tv</a> (<a class="el" href="structssl__info.html">ssl_info</a> *info, void *buf, int len, struct timeval *tv, int *ssl_errno)</td></tr>
+<tr class="separator:ab48fabc7040bc99b36de362aa4d7b229"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c63baa53cfdd533dbb359a8ca2e9ada"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#a5c63baa53cfdd533dbb359a8ca2e9ada">ssl_accept_simple</a> (<a class="el" href="structssl__info.html">ssl_info</a> *info,, int to_ms, int *ssl_errno)</td></tr>
+<tr class="memdesc:a5c63baa53cfdd533dbb359a8ca2e9ada"><td class="mdescLeft">&#160;</td><td class="mdescRight">auto generate <a class="el" href="ssl__select_8c.html#a5c63baa53cfdd533dbb359a8ca2e9ada" title="auto generate ssl_accept_simple()">ssl_accept_simple()</a>  <a href="ssl__select_8c.html#a5c63baa53cfdd533dbb359a8ca2e9ada">More...</a><br /></td></tr>
+<tr class="separator:a5c63baa53cfdd533dbb359a8ca2e9ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb9710167e19ec452faa6371bca3186a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#abb9710167e19ec452faa6371bca3186a">ssl_connect_simple</a> (<a class="el" href="structssl__info.html">ssl_info</a> *info,, int to_ms, int *ssl_errno)</td></tr>
+<tr class="memdesc:abb9710167e19ec452faa6371bca3186a"><td class="mdescLeft">&#160;</td><td class="mdescRight">auto generate <a class="el" href="ssl__select_8c.html#abb9710167e19ec452faa6371bca3186a" title="auto generate ssl_connect_simple()">ssl_connect_simple()</a>  <a href="ssl__select_8c.html#abb9710167e19ec452faa6371bca3186a">More...</a><br /></td></tr>
+<tr class="separator:abb9710167e19ec452faa6371bca3186a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a043988dfdcea5c8bf18f1fbe14aafccb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#a043988dfdcea5c8bf18f1fbe14aafccb">ssl_recv_simple</a> (<a class="el" href="structssl__info.html">ssl_info</a> *info, void *buf, int len, int to_ms, int *ssl_errno)</td></tr>
+<tr class="memdesc:a043988dfdcea5c8bf18f1fbe14aafccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">auto generate <a class="el" href="ssl__select_8c.html#a043988dfdcea5c8bf18f1fbe14aafccb" title="auto generate ssl_recv_simple()">ssl_recv_simple()</a>  <a href="ssl__select_8c.html#a043988dfdcea5c8bf18f1fbe14aafccb">More...</a><br /></td></tr>
+<tr class="separator:a043988dfdcea5c8bf18f1fbe14aafccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98b224417f1ee25b242b8503377d42a7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#a98b224417f1ee25b242b8503377d42a7">ssl_send_simple</a> (<a class="el" href="structssl__info.html">ssl_info</a> *info, void *buf, int len, int to_ms, int *ssl_errno)</td></tr>
+<tr class="memdesc:a98b224417f1ee25b242b8503377d42a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">auto generate <a class="el" href="ssl__select_8c.html#a98b224417f1ee25b242b8503377d42a7" title="auto generate ssl_send_simple()">ssl_send_simple()</a>  <a href="ssl__select_8c.html#a98b224417f1ee25b242b8503377d42a7">More...</a><br /></td></tr>
+<tr class="separator:a98b224417f1ee25b242b8503377d42a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeab15894c2d8c48e436111b4ee66b54e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#aeab15894c2d8c48e436111b4ee66b54e">ssl_handle_fds</a> (<a class="el" href="structssl__info.html">ssl_info</a> *info, fd_set *rfds, fd_set *wfds)</td></tr>
 <tr class="separator:aeab15894c2d8c48e436111b4ee66b54e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c9f6ecec0d085b30e8d50b4d9bee969"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structssl__info.html">ssl_info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__select_8c.html#a0c9f6ecec0d085b30e8d50b4d9bee969">sslinfo_alloc</a> (void)</td></tr>
@@ -249,6 +251,8 @@ Functions</h2></td></tr>
 <div class="line">        (BFIELD) |= (invoke_ssl_##FLAG);\</div>
 <div class="line">        }</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00441">441</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
+
 </div>
 </div>
 <a id="a369266c24eacffb87046522897a570d5" name="a369266c24eacffb87046522897a570d5"></a>
@@ -262,6 +266,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00001">1</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
 
 </div>
 </div>
@@ -296,6 +302,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00352">352</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
 
 </div>
 </div>
@@ -357,9 +365,11 @@ Functions</h2></td></tr>
 <div class="line">    \</div>
 <div class="line">    return <a class="code hl_define" href="ssl__select_8c.html#ac99fa0a62beafef7304c576754c335ca">_ssl_update_wait_event</a>(info, ACTION, ssl_errno);\</div>
 <div class="line">}</div>
-<div class="ttc" id="assl__select_8c_html_ac99fa0a62beafef7304c576754c335ca"><div class="ttname"><a href="ssl__select_8c.html#ac99fa0a62beafef7304c576754c335ca">_ssl_update_wait_event</a></div><div class="ttdeci">#define _ssl_update_wait_event(INFO, WEVENT, ERRNO)</div><div class="ttdef"><b>Definition:</b> ssl_select.c:352</div></div>
-<div class="ttc" id="astructssl__info_html"><div class="ttname"><a href="structssl__info.html">ssl_info</a></div><div class="ttdef"><b>Definition:</b> ssl_select.h:27</div></div>
+<div class="ttc" id="assl__select_8c_html_ac99fa0a62beafef7304c576754c335ca"><div class="ttname"><a href="ssl__select_8c.html#ac99fa0a62beafef7304c576754c335ca">_ssl_update_wait_event</a></div><div class="ttdeci">#define _ssl_update_wait_event(INFO, WEVENT, ERRNO)</div><div class="ttdef"><b>Definition:</b> <a href="ssl__select_8c_source.html#l00352">ssl_select.c:352</a></div></div>
+<div class="ttc" id="astructssl__info_html"><div class="ttname"><a href="structssl__info.html">ssl_info</a></div><div class="ttdef"><b>Definition:</b> <a href="ssl__select_8h_source.html#l00027">ssl_select.h:27</a></div></div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00355">355</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
+
 </div>
 </div>
 <a id="ad252baf716b6edc06c62793e7c8b5d84" name="ad252baf716b6edc06c62793e7c8b5d84"></a>
@@ -403,6 +413,8 @@ Functions</h2></td></tr>
 <div class="line">    return (FUNC);\</div>
 <div class="line">}\</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00421">421</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
+
 </div>
 </div>
 <a id="a69dc515136cda5664a6826128d8d8d1e" name="a69dc515136cda5664a6826128d8d8d1e"></a>
@@ -466,9 +478,11 @@ Functions</h2></td></tr>
 <div class="line">    \</div>
 <div class="line">    return ret;\</div>
 <div class="line">}</div>
-<div class="ttc" id="assl__select_8c_html_acb09bf8536d7134a3d1fed2502613bca"><div class="ttname"><a href="ssl__select_8c.html#acb09bf8536d7134a3d1fed2502613bca">ssl_set_fds</a></div><div class="ttdeci">int ssl_set_fds(ssl_info *info, int maxfd, fd_set *rfds, fd_set *wfds)</div><div class="ttdef"><b>Definition:</b> ssl_select.c:184</div></div>
-<div class="ttc" id="assl__select_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba8d1a655c11366ddb1006fc5215ac362b"><div class="ttname"><a href="ssl__select_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba8d1a655c11366ddb1006fc5215ac362b">SSL_OPS_FAIL</a></div><div class="ttdeci">@ SSL_OPS_FAIL</div><div class="ttdef"><b>Definition:</b> ssl_select.h:9</div></div>
+<div class="ttc" id="assl__select_8c_html_acb09bf8536d7134a3d1fed2502613bca"><div class="ttname"><a href="ssl__select_8c.html#acb09bf8536d7134a3d1fed2502613bca">ssl_set_fds</a></div><div class="ttdeci">int ssl_set_fds(ssl_info *info, int maxfd, fd_set *rfds, fd_set *wfds)</div><div class="ttdef"><b>Definition:</b> <a href="ssl__select_8c_source.html#l00184">ssl_select.c:184</a></div></div>
+<div class="ttc" id="assl__select_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba8d1a655c11366ddb1006fc5215ac362b"><div class="ttname"><a href="ssl__select_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba8d1a655c11366ddb1006fc5215ac362b">SSL_OPS_FAIL</a></div><div class="ttdeci">@ SSL_OPS_FAIL</div><div class="ttdef"><b>Definition:</b> <a href="ssl__select_8h_source.html#l00009">ssl_select.h:9</a></div></div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00383">383</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
+
 </div>
 </div>
 <a id="a9b738c8d8943398db6a1c9691544c39c" name="a9b738c8d8943398db6a1c9691544c39c"></a>
@@ -497,6 +511,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00484">484</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
@@ -518,6 +534,8 @@ Functions</h2></td></tr>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testc_8c-example.html#a12">testc.c</a>, and <a class="el" href="tests_8c-example.html#a19">tests.c</a>.</dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00217">217</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
+
 </div>
 </div>
 <a id="a400be6c1caebc96bf5b2204f36c4eb81" name="a400be6c1caebc96bf5b2204f36c4eb81"></a>
@@ -537,6 +555,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testc_8c-example.html#a13">testc.c</a>, and <a class="el" href="tests_8c-example.html#a16">tests.c</a>.</dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00236">236</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
 
 </div>
 </div>
@@ -562,493 +582,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-</div>
-</div>
-<a id="ab874553272858d29cea3cb68eedc2e47" name="ab874553272858d29cea3cb68eedc2e47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab874553272858d29cea3cb68eedc2e47">&#9670;&nbsp;</a></span>GEN_SSL_ACTION_DIRECT() <span class="overload">[1/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GEN_SSL_ACTION_DIRECT </td>
-          <td>(</td>
-          <td class="paramtype">accept&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">SSL_accept(info-&gt;ssl)&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ret&#160;</td>
-          <td class="paramname"> = <code>=1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="acfe93ac4ffc43bbd1151285c9d54c7a1" name="acfe93ac4ffc43bbd1151285c9d54c7a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acfe93ac4ffc43bbd1151285c9d54c7a1">&#9670;&nbsp;</a></span>GEN_SSL_ACTION_DIRECT() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GEN_SSL_ACTION_DIRECT </td>
-          <td>(</td>
-          <td class="paramtype">connect&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">SSL_connect(info-&gt;ssl)&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ret&#160;</td>
-          <td class="paramname"> = <code>=1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="adc778870375005d84a6b41cf2d5e9687" name="adc778870375005d84a6b41cf2d5e9687"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc778870375005d84a6b41cf2d5e9687">&#9670;&nbsp;</a></span>GEN_SSL_ACTION_DIRECT() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GEN_SSL_ACTION_DIRECT </td>
-          <td>(</td>
-          <td class="paramtype">recv&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">SSL_read(info-&gt;ssl, buf, len)&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ret&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">0&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>buf</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="abe3f67f4e845d45869734e0609c24c6b" name="abe3f67f4e845d45869734e0609c24c6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe3f67f4e845d45869734e0609c24c6b">&#9670;&nbsp;</a></span>GEN_SSL_ACTION_DIRECT() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GEN_SSL_ACTION_DIRECT </td>
-          <td>(</td>
-          <td class="paramtype">send&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">SSL_write(info-&gt;ssl, buf, len)&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ret&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">0&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>buf</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac855aefa20541eb976ea7a5cb9915fee" name="ac855aefa20541eb976ea7a5cb9915fee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac855aefa20541eb976ea7a5cb9915fee">&#9670;&nbsp;</a></span>GEN_SSL_ACTION_SIMPLE() <span class="overload">[1/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GEN_SSL_ACTION_SIMPLE </td>
-          <td>(</td>
-          <td class="paramtype">accept&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="ssl__select_8h.html#abdbe6ef3784f9d4293d5f6835e37ccee">ssl_accept_simple_tv</a>(info, &amp;tv, ssl_errno)&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>auto generate <a class="el" href="ssl__select_8h.html#ad1bc77633dc0c9217b53fa6401e1c2a7">ssl_accept_simple()</a> </p>
-
-</div>
-</div>
-<a id="a6c4204c5e94aa8c364e2e40cf337eb88" name="a6c4204c5e94aa8c364e2e40cf337eb88"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c4204c5e94aa8c364e2e40cf337eb88">&#9670;&nbsp;</a></span>GEN_SSL_ACTION_SIMPLE() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GEN_SSL_ACTION_SIMPLE </td>
-          <td>(</td>
-          <td class="paramtype">connect&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="ssl__select_8h.html#aa49585b84cafef202553b608e2ff5cce">ssl_connect_simple_tv</a>(info, &amp;tv, ssl_errno)&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>auto generate <a class="el" href="ssl__select_8h.html#a31acd08ff4c9971f53c75ba5a6287473">ssl_connect_simple()</a> </p>
-
-</div>
-</div>
-<a id="a805efd10eee8f8f338834c204d709960" name="a805efd10eee8f8f338834c204d709960"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a805efd10eee8f8f338834c204d709960">&#9670;&nbsp;</a></span>GEN_SSL_ACTION_SIMPLE() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GEN_SSL_ACTION_SIMPLE </td>
-          <td>(</td>
-          <td class="paramtype">recv&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="ssl__select_8h.html#aedb58e27c8b61741fe4a5775ad9ee588">ssl_recv_simple_tv</a>(info, buf, len, &amp;tv, ssl_errno)&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>buf</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>auto generate <a class="el" href="ssl__select_8h.html#a043988dfdcea5c8bf18f1fbe14aafccb">ssl_recv_simple()</a> </p>
-
-</div>
-</div>
-<a id="a76638d5f3795f23212182662cf38bca6" name="a76638d5f3795f23212182662cf38bca6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76638d5f3795f23212182662cf38bca6">&#9670;&nbsp;</a></span>GEN_SSL_ACTION_SIMPLE() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GEN_SSL_ACTION_SIMPLE </td>
-          <td>(</td>
-          <td class="paramtype">send&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="ssl__select_8h.html#ab48fabc7040bc99b36de362aa4d7b229">ssl_send_simple_tv</a>(info, buf, len, &amp;tv, ssl_errno)&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>buf</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>auto generate <a class="el" href="ssl__select_8h.html#a98b224417f1ee25b242b8503377d42a7">ssl_send_simple()</a> </p>
-
-</div>
-</div>
-<a id="ac7747f8c6e815109d7762ba86134c031" name="ac7747f8c6e815109d7762ba86134c031"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7747f8c6e815109d7762ba86134c031">&#9670;&nbsp;</a></span>GEN_SSL_ACTION_SIMPLE_TV() <span class="overload">[1/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GEN_SSL_ACTION_SIMPLE_TV </td>
-          <td>(</td>
-          <td class="paramtype">accept&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="ssl__select_8h.html#a451035eb4c1c998c17db4c87bca3b269">ssl_accept_direct</a>(info, ssl_errno)&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ret&#160;</td>
-          <td class="paramname"> = <code>=1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac81e4d1f6df37edb3e24e4f3b70f178a" name="ac81e4d1f6df37edb3e24e4f3b70f178a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac81e4d1f6df37edb3e24e4f3b70f178a">&#9670;&nbsp;</a></span>GEN_SSL_ACTION_SIMPLE_TV() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GEN_SSL_ACTION_SIMPLE_TV </td>
-          <td>(</td>
-          <td class="paramtype">connect&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="ssl__select_8h.html#a19f30823d1414006cd41ed4c4c37b652">ssl_connect_direct</a>(info, ssl_errno)&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ret&#160;</td>
-          <td class="paramname"> = <code>=1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5561853fa6eacad58e814d7aa07aee5f" name="a5561853fa6eacad58e814d7aa07aee5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5561853fa6eacad58e814d7aa07aee5f">&#9670;&nbsp;</a></span>GEN_SSL_ACTION_SIMPLE_TV() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GEN_SSL_ACTION_SIMPLE_TV </td>
-          <td>(</td>
-          <td class="paramtype">recv&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="ssl__select_8h.html#a1250288d07947f8c7f2fc4461db11f2e">ssl_recv_direct</a>(info, buf, len, ssl_errno)&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ret&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">0&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>buf</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aab3a69cbf5ed032541b7e3d217af564d" name="aab3a69cbf5ed032541b7e3d217af564d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab3a69cbf5ed032541b7e3d217af564d">&#9670;&nbsp;</a></span>GEN_SSL_ACTION_SIMPLE_TV() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GEN_SSL_ACTION_SIMPLE_TV </td>
-          <td>(</td>
-          <td class="paramtype">send&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="ssl__select_8h.html#a662b6d58d9bdce2d4ddaec38633d0c3f">ssl_send_direct</a>(info, buf, len, ssl_errno)&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ret&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">0&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>buf</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00179">179</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
 
 </div>
 </div>
@@ -1070,6 +604,8 @@ Functions</h2></td></tr>
 <p >init ssl library calls SSL_library_init(), SSL_load_error_strings()...etc. should be called before any SSL action </p>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="tests_8c-example.html#a3">tests.c</a>.</dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00089">89</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
 
 </div>
 </div>
@@ -1122,6 +658,305 @@ Functions</h2></td></tr>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="tests_8c-example.html#a4">tests.c</a>.</dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00113">113</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
+
+</div>
+</div>
+<a id="ae2e0978d1aabe2d3946638c77968ae73" name="ae2e0978d1aabe2d3946638c77968ae73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2e0978d1aabe2d3946638c77968ae73">&#9670;&nbsp;</a></span>ssl_accept_direct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ssl_accept_direct </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structssl__info.html">ssl_info</a> *&#160;</td>
+          <td class="paramname"><em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>ssl_errno</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >ssl_accept() nonblocking called directly. <br  />
+ </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>the <a class="el" href="structssl__info.html">ssl_info</a>, </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">ssl_errno</td><td>the error number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>&gt;= 0 the succss value returned by ssl_accept()</li>
+<li>SSL_OPS_FAIL action failed, get error message with <a class="el" href="ssl__select_8h.html#a54e11373d34ff9699a5c947fef26bc32">ssl_errno_str()</a>.</li>
+<li>SSL_OPS_SELECT actoin pending, use <a class="el" href="ssl__select_8h.html#acb09bf8536d7134a3d1fed2502613bca">ssl_set_fds()</a> to setup the fd_sets before select(). </li>
+</ul>
+</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00378">378</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
+
+</div>
+</div>
+<a id="a5c63baa53cfdd533dbb359a8ca2e9ada" name="a5c63baa53cfdd533dbb359a8ca2e9ada"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c63baa53cfdd533dbb359a8ca2e9ada">&#9670;&nbsp;</a></span>ssl_accept_simple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ssl_accept_simple </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structssl__info.html">ssl_info</a> *&#160;</td>
+          <td class="paramname"><em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>to_ms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>ssl_errno</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>auto generate <a class="el" href="ssl__select_8c.html#a5c63baa53cfdd533dbb359a8ca2e9ada" title="auto generate ssl_accept_simple()">ssl_accept_simple()</a> </p>
+<p >ssl_accept() with timeout given with an intiger as miliseconds a simple blocking SSL_accept() function with a timeout. generated by <a class="el" href="ssl__select_8c.html#ad252baf716b6edc06c62793e7c8b5d84">GEN_SSL_ACTION_SIMPLE()</a> <br  />
+ </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>the <a class="el" href="structssl__info.html">ssl_info</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">to_ms</td><td>timeout in miliseconds. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">ssl_errno</td><td>the ssl_errno, that can be used by <a class="el" href="ssl__select_8h.html#a54e11373d34ff9699a5c947fef26bc32">ssl_errno_str()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>&gt;= 0 the succss value returned by <a class="el" href="testc_8c.html#a61f53a7db22cf8e507962e872be79a24">ssl_connect()</a></li>
+<li>SSL_OPS_FAIL action failed, get error message with <a class="el" href="ssl__select_8h.html#a54e11373d34ff9699a5c947fef26bc32">ssl_errno_str()</a>.</li>
+<li>SSL_OPS_SELECT actoin pending, use <a class="el" href="ssl__select_8h.html#acb09bf8536d7134a3d1fed2502613bca">ssl_set_fds()</a> to setup the fd_sets before select(). </li>
+</ul>
+</dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="tests_8c-example.html#a12">tests.c</a>.</dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00432">432</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
+
+</div>
+</div>
+<a id="a0dc1491fa45e05c562f3e4d1292a91dc" name="a0dc1491fa45e05c562f3e4d1292a91dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dc1491fa45e05c562f3e4d1292a91dc">&#9670;&nbsp;</a></span>ssl_accept_simple_tv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ssl_accept_simple_tv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structssl__info.html">ssl_info</a> *&#160;</td>
+          <td class="paramname"><em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct timeval *&#160;</td>
+          <td class="paramname"><em>tv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>ssl_errno</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >ssl_accept() with timeout given with timeval a simple blocking SSL_accept() function with a timeout. generated by <a class="el" href="ssl__select_8c.html#ad252baf716b6edc06c62793e7c8b5d84">GEN_SSL_ACTION_SIMPLE()</a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>the <a class="el" href="structssl__info.html">ssl_info</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tv</td><td>timeout in miliseconds. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">ssl_errno</td><td>the ssl_errno, that can be used by <a class="el" href="ssl__select_8h.html#a54e11373d34ff9699a5c947fef26bc32">ssl_errno_str()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>&gt;= 0 the succss value returned by <a class="el" href="testc_8c.html#a61f53a7db22cf8e507962e872be79a24">ssl_connect()</a></li>
+<li>SSL_OPS_FAIL action failed, get error message with <a class="el" href="ssl__select_8h.html#a54e11373d34ff9699a5c947fef26bc32">ssl_errno_str()</a>.</li>
+<li>SSL_OPS_SELECT actoin pending, use <a class="el" href="ssl__select_8h.html#acb09bf8536d7134a3d1fed2502613bca">ssl_set_fds()</a> to setup the fd_sets before select(). </li>
+</ul>
+</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00410">410</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
+
+</div>
+</div>
+<a id="a86c9b0278fc9f9b64226f8dd433b351b" name="a86c9b0278fc9f9b64226f8dd433b351b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86c9b0278fc9f9b64226f8dd433b351b">&#9670;&nbsp;</a></span>ssl_connect_direct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ssl_connect_direct </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structssl__info.html">ssl_info</a> *&#160;</td>
+          <td class="paramname"><em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>ssl_errno</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >ssl_connect nonblocking called directly </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>the <a class="el" href="structssl__info.html">ssl_info</a>, </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">ssl_errno</td><td>the error number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>&gt;= 0 the succss value returned by <a class="el" href="testc_8c.html#a61f53a7db22cf8e507962e872be79a24">ssl_connect()</a></li>
+<li>SSL_OPS_FAIL action failed, get error message with <a class="el" href="ssl__select_8h.html#a54e11373d34ff9699a5c947fef26bc32">ssl_errno_str()</a>.</li>
+<li>SSL_OPS_SELECT actoin pending, use <a class="el" href="ssl__select_8h.html#acb09bf8536d7134a3d1fed2502613bca">ssl_set_fds()</a> to setup the fd_sets before select(). </li>
+</ul>
+</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00379">379</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
+
+</div>
+</div>
+<a id="abb9710167e19ec452faa6371bca3186a" name="abb9710167e19ec452faa6371bca3186a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb9710167e19ec452faa6371bca3186a">&#9670;&nbsp;</a></span>ssl_connect_simple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ssl_connect_simple </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structssl__info.html">ssl_info</a> *&#160;</td>
+          <td class="paramname"><em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>to_ms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>ssl_errno</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>auto generate <a class="el" href="ssl__select_8c.html#abb9710167e19ec452faa6371bca3186a" title="auto generate ssl_connect_simple()">ssl_connect_simple()</a> </p>
+<p ><a class="el" href="testc_8c.html#a61f53a7db22cf8e507962e872be79a24">ssl_connect()</a> with timeout given with an intiger as miliseconds a simple blocking SSL_accept() function with a timeout. generated by <a class="el" href="ssl__select_8c.html#ad252baf716b6edc06c62793e7c8b5d84">GEN_SSL_ACTION_SIMPLE()</a>. <br  />
+ </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>the <a class="el" href="structssl__info.html">ssl_info</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">to_ms</td><td>timeout in miliseconds. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">ssl_errno</td><td>the ssl_errno, that can be used by <a class="el" href="ssl__select_8h.html#a54e11373d34ff9699a5c947fef26bc32">ssl_errno_str()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>&gt;= 0 the succss value returned by <a class="el" href="testc_8c.html#a61f53a7db22cf8e507962e872be79a24">ssl_connect()</a></li>
+<li>SSL_OPS_FAIL action failed, get error message with <a class="el" href="ssl__select_8h.html#a54e11373d34ff9699a5c947fef26bc32">ssl_errno_str()</a>.</li>
+<li>SSL_OPS_SELECT actoin pending, use <a class="el" href="ssl__select_8h.html#acb09bf8536d7134a3d1fed2502613bca">ssl_set_fds()</a> to setup the fd_sets before select(). </li>
+</ul>
+</dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testc_8c-example.html#a9">testc.c</a>.</dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00434">434</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
+
+</div>
+</div>
+<a id="a54f3b9df81771774ed87283765367d57" name="a54f3b9df81771774ed87283765367d57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54f3b9df81771774ed87283765367d57">&#9670;&nbsp;</a></span>ssl_connect_simple_tv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ssl_connect_simple_tv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structssl__info.html">ssl_info</a> *&#160;</td>
+          <td class="paramname"><em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct timeval *&#160;</td>
+          <td class="paramname"><em>tv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>ssl_errno</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p ><a class="el" href="testc_8c.html#a61f53a7db22cf8e507962e872be79a24">ssl_connect()</a> with timeout given with an timeval a simple blocking SSL_accept() function with a timeout. generated by <a class="el" href="ssl__select_8c.html#ad252baf716b6edc06c62793e7c8b5d84">GEN_SSL_ACTION_SIMPLE()</a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>the <a class="el" href="structssl__info.html">ssl_info</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tv</td><td>timeout. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">ssl_errno</td><td>the ssl_errno, that can be used by <a class="el" href="ssl__select_8h.html#a54e11373d34ff9699a5c947fef26bc32">ssl_errno_str()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>&gt;= 0 the succss value returned by ssl_write()</li>
+<li>SSL_OPS_FAIL action failed, get error message with <a class="el" href="ssl__select_8h.html#a54e11373d34ff9699a5c947fef26bc32">ssl_errno_str()</a>.</li>
+<li>SSL_OPS_SELECT actoin pending, use <a class="el" href="ssl__select_8h.html#acb09bf8536d7134a3d1fed2502613bca">ssl_set_fds()</a> to setup the fd_sets before select(). </li>
+</ul>
+</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00413">413</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
+
 </div>
 </div>
 <a id="a54e11373d34ff9699a5c947fef26bc32" name="a54e11373d34ff9699a5c947fef26bc32"></a>
@@ -1172,6 +1007,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the length of the error string. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00319">319</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
+
 </div>
 </div>
 <a id="aeab15894c2d8c48e436111b4ee66b54e" name="aeab15894c2d8c48e436111b4ee66b54e"></a>
@@ -1214,14 +1051,396 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>an int bit mast composed of the following bits<ul>
-<li>invoke_ssl_send <a class="el" href="ssl__select_8h.html#a662b6d58d9bdce2d4ddaec38633d0c3f">ssl_send_direct()</a> is ready.</li>
-<li>invoke_ssl_recv <a class="el" href="ssl__select_8h.html#a1250288d07947f8c7f2fc4461db11f2e">ssl_recv_direct()</a> is ready.</li>
-<li>invoke_ssl_connect <a class="el" href="ssl__select_8h.html#a19f30823d1414006cd41ed4c4c37b652">ssl_connect_direct()</a> is ready.</li>
-<li>invoke_ssl_accept <a class="el" href="ssl__select_8h.html#a451035eb4c1c998c17db4c87bca3b269">ssl_accept_direct()</a> is ready. </li>
+<li>invoke_ssl_send <a class="el" href="ssl__select_8c.html#aa4dc4e37cd5dec7990b6bf6645360f9a">ssl_send_direct()</a> is ready.</li>
+<li>invoke_ssl_recv <a class="el" href="ssl__select_8c.html#ab30f249650317ef85a2fdc56996dbd9b">ssl_recv_direct()</a> is ready.</li>
+<li>invoke_ssl_connect <a class="el" href="ssl__select_8c.html#a86c9b0278fc9f9b64226f8dd433b351b">ssl_connect_direct()</a> is ready.</li>
+<li>invoke_ssl_accept <a class="el" href="ssl__select_8c.html#ae2e0978d1aabe2d3946638c77968ae73">ssl_accept_direct()</a> is ready. </li>
 </ul>
 </dd></dl>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testc_8c-example.html#a23">testc.c</a>.</dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00456">456</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
+
+</div>
+</div>
+<a id="ab30f249650317ef85a2fdc56996dbd9b" name="ab30f249650317ef85a2fdc56996dbd9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab30f249650317ef85a2fdc56996dbd9b">&#9670;&nbsp;</a></span>ssl_recv_direct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ssl_recv_direct </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structssl__info.html">ssl_info</a> *&#160;</td>
+          <td class="paramname"><em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>ssl_errno</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >ssl_trsf() nonblocking called directly </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>the <a class="el" href="structssl__info.html">ssl_info</a>, </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">buf</td><td>the data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>the buffer length </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">ssl_errno</td><td>the error number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>&gt;= 0 the succss value returned by ssl_accept()</li>
+<li>SSL_OPS_FAIL action failed, get error message with <a class="el" href="ssl__select_8h.html#a54e11373d34ff9699a5c947fef26bc32">ssl_errno_str()</a>.</li>
+<li>SSL_OPS_SELECT actoin pending, use <a class="el" href="ssl__select_8h.html#acb09bf8536d7134a3d1fed2502613bca">ssl_set_fds()</a> to setup the fd_sets before select(). </li>
+</ul>
+</dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testc_8c-example.html#a21">testc.c</a>, and <a class="el" href="tests_8c-example.html#a17">tests.c</a>.</dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00380">380</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
+
+</div>
+</div>
+<a id="a043988dfdcea5c8bf18f1fbe14aafccb" name="a043988dfdcea5c8bf18f1fbe14aafccb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a043988dfdcea5c8bf18f1fbe14aafccb">&#9670;&nbsp;</a></span>ssl_recv_simple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ssl_recv_simple </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structssl__info.html">ssl_info</a> *&#160;</td>
+          <td class="paramname"><em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>to_ms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>ssl_errno</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>auto generate <a class="el" href="ssl__select_8c.html#a043988dfdcea5c8bf18f1fbe14aafccb" title="auto generate ssl_recv_simple()">ssl_recv_simple()</a> </p>
+<p >ssl_read() with timeout given with an intiger as miliseconds a simple blocking SSL_accept() function with a timeout. generated by <a class="el" href="ssl__select_8c.html#ad252baf716b6edc06c62793e7c8b5d84">GEN_SSL_ACTION_SIMPLE()</a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>the <a class="el" href="structssl__info.html">ssl_info</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">to_ms</td><td>timeout in miliseconds. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>data to send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>data length </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">ssl_errno</td><td>the ssl_errno, that can be used by <a class="el" href="ssl__select_8h.html#a54e11373d34ff9699a5c947fef26bc32">ssl_errno_str()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>&gt;= 0 the succss value returned by ssl_read()</li>
+<li>SSL_OPS_FAIL action failed, get error message with <a class="el" href="ssl__select_8h.html#a54e11373d34ff9699a5c947fef26bc32">ssl_errno_str()</a>.</li>
+<li>SSL_OPS_SELECT actoin pending, use <a class="el" href="ssl__select_8h.html#acb09bf8536d7134a3d1fed2502613bca">ssl_set_fds()</a> to setup the fd_sets before select(). </li>
+</ul>
+</dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testc_8c-example.html#a26">testc.c</a>.</dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00436">436</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
+
+</div>
+</div>
+<a id="aedb58e27c8b61741fe4a5775ad9ee588" name="aedb58e27c8b61741fe4a5775ad9ee588"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedb58e27c8b61741fe4a5775ad9ee588">&#9670;&nbsp;</a></span>ssl_recv_simple_tv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ssl_recv_simple_tv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structssl__info.html">ssl_info</a> *&#160;</td>
+          <td class="paramname"><em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct timeval *&#160;</td>
+          <td class="paramname"><em>tv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>ssl_errno</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >ssl_read() with timeout given with an timeval a simple blocking SSL_accept() function with a timeout. generated by <a class="el" href="ssl__select_8c.html#ad252baf716b6edc06c62793e7c8b5d84">GEN_SSL_ACTION_SIMPLE()</a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>the <a class="el" href="structssl__info.html">ssl_info</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tv</td><td>timeout. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>buffer length </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">ssl_errno</td><td>the ssl_errno, that can be used by <a class="el" href="ssl__select_8h.html#a54e11373d34ff9699a5c947fef26bc32">ssl_errno_str()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>&gt;= 0 the succss value returned by ssl_read()</li>
+<li>SSL_OPS_FAIL action failed, get error message with <a class="el" href="ssl__select_8h.html#a54e11373d34ff9699a5c947fef26bc32">ssl_errno_str()</a>.</li>
+<li>SSL_OPS_SELECT actoin pending, use <a class="el" href="ssl__select_8h.html#acb09bf8536d7134a3d1fed2502613bca">ssl_set_fds()</a> to setup the fd_sets before select(). </li>
+</ul>
+</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00416">416</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
+
+</div>
+</div>
+<a id="aa4dc4e37cd5dec7990b6bf6645360f9a" name="aa4dc4e37cd5dec7990b6bf6645360f9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4dc4e37cd5dec7990b6bf6645360f9a">&#9670;&nbsp;</a></span>ssl_send_direct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ssl_send_direct </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structssl__info.html">ssl_info</a> *&#160;</td>
+          <td class="paramname"><em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>ssl_errno</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >ssl_write() nonblocking called directly </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>the <a class="el" href="structssl__info.html">ssl_info</a>, </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">buf</td><td>the send data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>the data length </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">ssl_errno</td><td>the error number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>&gt;= 0 the succss value returned by ssl_write()</li>
+<li>SSL_OPS_FAIL action failed, get error message with <a class="el" href="ssl__select_8h.html#a54e11373d34ff9699a5c947fef26bc32">ssl_errno_str()</a>.</li>
+<li>SSL_OPS_SELECT actoin pending, use <a class="el" href="ssl__select_8h.html#acb09bf8536d7134a3d1fed2502613bca">ssl_set_fds()</a> to setup the fd_sets before select(). </li>
+</ul>
+</dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testc_8c-example.html#a14">testc.c</a>, and <a class="el" href="tests_8c-example.html#a18">tests.c</a>.</dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00381">381</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
+
+</div>
+</div>
+<a id="a98b224417f1ee25b242b8503377d42a7" name="a98b224417f1ee25b242b8503377d42a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98b224417f1ee25b242b8503377d42a7">&#9670;&nbsp;</a></span>ssl_send_simple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ssl_send_simple </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structssl__info.html">ssl_info</a> *&#160;</td>
+          <td class="paramname"><em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>to_ms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>ssl_errno</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>auto generate <a class="el" href="ssl__select_8c.html#a98b224417f1ee25b242b8503377d42a7" title="auto generate ssl_send_simple()">ssl_send_simple()</a> </p>
+<p >ssl_write() with timeout given with an intiger as miliseconds a simple blocking SSL_accept() function with a timeout. generated by <a class="el" href="ssl__select_8c.html#ad252baf716b6edc06c62793e7c8b5d84">GEN_SSL_ACTION_SIMPLE()</a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>the <a class="el" href="structssl__info.html">ssl_info</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">to_ms</td><td>timeout in miliseconds. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>data to send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>data length </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">ssl_errno</td><td>the ssl_errno, that can be used by <a class="el" href="ssl__select_8h.html#a54e11373d34ff9699a5c947fef26bc32">ssl_errno_str()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>&gt;= 0 the succss value returned by ssl_write()</li>
+<li>SSL_OPS_FAIL action failed, get error message with <a class="el" href="ssl__select_8h.html#a54e11373d34ff9699a5c947fef26bc32">ssl_errno_str()</a>.</li>
+<li>SSL_OPS_SELECT actoin pending, use <a class="el" href="ssl__select_8h.html#acb09bf8536d7134a3d1fed2502613bca">ssl_set_fds()</a> to setup the fd_sets before select(). </li>
+</ul>
+</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00438">438</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
+
+</div>
+</div>
+<a id="ab48fabc7040bc99b36de362aa4d7b229" name="ab48fabc7040bc99b36de362aa4d7b229"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab48fabc7040bc99b36de362aa4d7b229">&#9670;&nbsp;</a></span>ssl_send_simple_tv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ssl_send_simple_tv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structssl__info.html">ssl_info</a> *&#160;</td>
+          <td class="paramname"><em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct timeval *&#160;</td>
+          <td class="paramname"><em>tv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>ssl_errno</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >ssl_write() with timeout given with an timeval a simple blocking SSL_accept() function with a timeout. generated by <a class="el" href="ssl__select_8c.html#ad252baf716b6edc06c62793e7c8b5d84">GEN_SSL_ACTION_SIMPLE()</a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>the <a class="el" href="structssl__info.html">ssl_info</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tv</td><td>timeout. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>data to send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>data length </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">ssl_errno</td><td>the ssl_errno, that can be used by <a class="el" href="ssl__select_8h.html#a54e11373d34ff9699a5c947fef26bc32">ssl_errno_str()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>&gt;= 0 the succss value returned by ssl_read()</li>
+<li>SSL_OPS_FAIL action failed, get error message with <a class="el" href="ssl__select_8h.html#a54e11373d34ff9699a5c947fef26bc32">ssl_errno_str()</a>.</li>
+<li>SSL_OPS_SELECT actoin pending, use <a class="el" href="ssl__select_8h.html#acb09bf8536d7134a3d1fed2502613bca">ssl_set_fds()</a> to setup the fd_sets before select(). </li>
+</ul>
+</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00419">419</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
 
 </div>
 </div>
@@ -1265,6 +1484,8 @@ Functions</h2></td></tr>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testc_8c-example.html#a20">testc.c</a>.</dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00184">184</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
+
 </div>
 </div>
 <a id="a0c9f6ecec0d085b30e8d50b4d9bee969" name="a0c9f6ecec0d085b30e8d50b4d9bee969"></a>
@@ -1292,6 +1513,8 @@ Functions</h2></td></tr>
 </ul>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testc_8c-example.html#a5">testc.c</a>, and <a class="el" href="tests_8c-example.html#a8">tests.c</a>.</dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="ssl__select_8c_source.html#l00493">493</a> of file <a class="el" href="ssl__select_8c_source.html">ssl_select.c</a>.</p>
 
 </div>
 </div>
