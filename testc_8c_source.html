@@ -108,22 +108,22 @@ $(document).ready(function(){initNavTree('testc_8c_source.html',''); initResizab
 </div><!--header-->
 <div class="contents">
 <a href="testc_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;arpa/inet.h&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;error.h&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;fcntl.h&gt;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;limits.h&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;netdb.h&gt;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;netinet/in.h&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;netinet/tcp.h&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;sys/socket.h&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;sys/stat.h&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;sys/time.h&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;sys/types.h&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="ssl__select_8h.html">ssl_select.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="ssl__select_8h.html">ssl_select.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;arpa/inet.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;error.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;fcntl.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;limits.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;netdb.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;netinet/in.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;netinet/tcp.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;sys/socket.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;sys/stat.h&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;sys/time.h&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;sys/types.h&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="testc_8c.html#aad6e5cb6faf3b6bbf30d96e6d8827408">   22</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="testc_8c.html#aad6e5cb6faf3b6bbf30d96e6d8827408">http_req</a> = <span class="stringliteral">&quot;GET / HTTP/1.0\r\n\r\n&quot;</span>;</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
@@ -311,87 +311,92 @@ $(document).ready(function(){initNavTree('testc_8c_source.html',''); initResizab
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        }</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    } <span class="keywordflow">while</span> (0);</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    free(_ssl);</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    close(sk);</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="keywordflow">return</span> cnt;</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>}</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    SSL_shutdown(_ssl-&gt;<a class="code hl_variable" href="structssl__info.html#ae7c0417fa2881f3546920311fee80311">ssl</a>);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    SSL_free(_ssl-&gt;<a class="code hl_variable" href="structssl__info.html#ae7c0417fa2881f3546920311fee80311">ssl</a>);</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    close(_ssl-&gt;<a class="code hl_variable" href="structssl__info.html#a603590eee2547ee63c19918de7076b8a">sk</a>);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    free(_ssl);</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="testc_8c.html#a37ed8cb14f8054d47f8d9720a4275311">  213</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="testc_8c.html#a37ed8cb14f8054d47f8d9720a4275311">ssl_blocking_test</a>(<span class="keywordtype">int</span> sk)</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>{</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <span class="keywordflow">if</span> (sk &lt; 0)</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    <a class="code hl_function" href="ssl__select_8c.html#ac028f0fe56a41df2980a4a031d3d0e80">__set_block</a>(sk);</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <a class="code hl_struct" href="structssl__info.html">ssl_info</a>* _ssl = <a class="code hl_function" href="testc_8c.html#a61f53a7db22cf8e507962e872be79a24">ssl_connect</a>(sk);</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <span class="keywordflow">if</span> (!_ssl)</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        <span class="keywordflow">return</span> -2;</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="keywordtype">int</span> cnt = 0;</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <span class="keywordtype">int</span> ssl_errno;</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <span class="keywordtype">char</span> ssl_errstr[256];</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keywordflow">do</span> {</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        <span class="comment">// send message</span></div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="ssl__select_8c.html#aa4dc4e37cd5dec7990b6bf6645360f9a">ssl_send_direct</a>(_ssl, (<span class="keywordtype">void</span>*)<a class="code hl_variable" href="testc_8c.html#aad6e5cb6faf3b6bbf30d96e6d8827408">http_req</a>, strlen(<a class="code hl_variable" href="testc_8c.html#aad6e5cb6faf3b6bbf30d96e6d8827408">http_req</a>), &amp;ssl_errno)) {</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            <a class="code hl_define" href="testc_8c.html#a33abe210666ac23cd667458558e93a43">ssl_perror</a>(<span class="stringliteral">&quot;ssl_send_direct&quot;</span>);</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        }</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        <span class="keywordtype">char</span> recv_buf[1024] = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        <span class="keywordtype">int</span> rlen = <span class="keyword">sizeof</span>(recv_buf) - 1;</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        <span class="keywordflow">while</span> (1) {</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>            <span class="keywordtype">int</span> len = <a class="code hl_function" href="ssl__select_8c.html#a043988dfdcea5c8bf18f1fbe14aafccb">ssl_recv_simple</a>(_ssl, recv_buf, rlen, 3000, &amp;ssl_errno);</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            <span class="keywordflow">if</span> (len &gt; 0) {</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                recv_buf[len] = 0;</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span><span class="preprocessor">#ifdef PRINTF_RECV_BUF</span></div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                printf(<span class="stringliteral">&quot;%s&quot;</span>, recv_buf);</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                printf(<span class="stringliteral">&quot;recv(%d)\n&quot;</span>,len);</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>                cnt += len;</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>                <a class="code hl_define" href="testc_8c.html#a33abe210666ac23cd667458558e93a43">ssl_perror</a>(<span class="stringliteral">&quot;ssl_recv_direct&quot;</span>);</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            }</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        }</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    } <span class="keywordflow">while</span> (0);</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    free(_ssl);</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    close(sk);</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    <span class="keywordflow">return</span> cnt;</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>}</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno"><a class="line" href="testc_8c.html#a0ddf1224851353fc92bfbff6f499fa97">  258</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="testc_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>{</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="keywordtype">char</span> ip[1024];</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keywordtype">char</span>* hostname = NULL;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="keywordflow">return</span> cnt;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>}</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="testc_8c.html#a37ed8cb14f8054d47f8d9720a4275311">  216</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="testc_8c.html#a37ed8cb14f8054d47f8d9720a4275311">ssl_blocking_test</a>(<span class="keywordtype">int</span> sk)</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>{</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    <span class="keywordflow">if</span> (sk &lt; 0)</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <a class="code hl_function" href="ssl__select_8c.html#ac028f0fe56a41df2980a4a031d3d0e80">__set_block</a>(sk);</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    <a class="code hl_struct" href="structssl__info.html">ssl_info</a>* _ssl = <a class="code hl_function" href="testc_8c.html#a61f53a7db22cf8e507962e872be79a24">ssl_connect</a>(sk);</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="keywordflow">if</span> (!_ssl)</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        <span class="keywordflow">return</span> -2;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="keywordtype">int</span> cnt = 0;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keywordtype">int</span> ssl_errno;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <span class="keywordtype">char</span> ssl_errstr[256];</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <span class="keywordflow">do</span> {</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        <span class="comment">// send message</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="ssl__select_8c.html#aa4dc4e37cd5dec7990b6bf6645360f9a">ssl_send_direct</a>(_ssl, (<span class="keywordtype">void</span>*)<a class="code hl_variable" href="testc_8c.html#aad6e5cb6faf3b6bbf30d96e6d8827408">http_req</a>, strlen(<a class="code hl_variable" href="testc_8c.html#aad6e5cb6faf3b6bbf30d96e6d8827408">http_req</a>), &amp;ssl_errno)) {</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            <a class="code hl_define" href="testc_8c.html#a33abe210666ac23cd667458558e93a43">ssl_perror</a>(<span class="stringliteral">&quot;ssl_send_direct&quot;</span>);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        }</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        <span class="keywordtype">char</span> recv_buf[1024] = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        <span class="keywordtype">int</span> rlen = <span class="keyword">sizeof</span>(recv_buf) - 1;</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        <span class="keywordflow">while</span> (1) {</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>            <span class="keywordtype">int</span> len = <a class="code hl_function" href="ssl__select_8c.html#a043988dfdcea5c8bf18f1fbe14aafccb">ssl_recv_simple</a>(_ssl, recv_buf, rlen, 3000, &amp;ssl_errno);</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            <span class="keywordflow">if</span> (len &gt; 0) {</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                recv_buf[len] = 0;</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span><span class="preprocessor">#ifdef PRINTF_RECV_BUF</span></div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>                printf(<span class="stringliteral">&quot;%s&quot;</span>, recv_buf);</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>                printf(<span class="stringliteral">&quot;recv(%d)\n&quot;</span>, len);</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                cnt += len;</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>                <a class="code hl_define" href="testc_8c.html#a33abe210666ac23cd667458558e93a43">ssl_perror</a>(<span class="stringliteral">&quot;ssl_recv_direct&quot;</span>);</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>            }</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        }</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    } <span class="keywordflow">while</span> (0);</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    SSL_shutdown(_ssl-&gt;<a class="code hl_variable" href="structssl__info.html#ae7c0417fa2881f3546920311fee80311">ssl</a>);</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    SSL_free(_ssl-&gt;<a class="code hl_variable" href="structssl__info.html#ae7c0417fa2881f3546920311fee80311">ssl</a>);</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    close(_ssl-&gt;<a class="code hl_variable" href="structssl__info.html#a603590eee2547ee63c19918de7076b8a">sk</a>);</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    free(_ssl);</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="keywordflow">return</span> cnt;</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>}</div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    <span class="keywordflow">if</span> (argc == 2)</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        hostname = argv[1];</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (argc == 1)</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        hostname = <span class="stringliteral">&quot;www.google.com&quot;</span>;</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        printf(<span class="stringliteral">&quot;usage:\n&quot;</span></div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>               <span class="stringliteral">&quot;\twebclient\n&quot;</span></div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>               <span class="stringliteral">&quot;\twebclient www.yahoo.com\n&quot;</span>);</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    }</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <span class="comment">// get google ip</span></div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    <a class="code hl_function" href="testc_8c.html#a0d5e428ead5875e99663a6bb673fa0a8">hostname_to_ip</a>(hostname, ip);</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    printf(<span class="stringliteral">&quot;%s resolved to %s\n&quot;</span>, hostname, ip);</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    printf(<span class="stringliteral">&quot;======= ssl_nonblocking ==========\n&quot;</span>);</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <span class="comment">// https test</span></div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    <span class="keywordtype">int</span> ret;</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    ret = <a class="code hl_function" href="testc_8c.html#a7952d415e4870feb5e6752db26c5b2ad">ssl_nonblocking_test</a>(<a class="code hl_function" href="testc_8c.html#a3fa64553c7699f1d16f5f5277a212dad">tcp_connect</a>(ip, <span class="stringliteral">&quot;443&quot;</span>));</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    printf(<span class="stringliteral">&quot;https_nbk_test, total_len = %d\n&quot;</span>, ret);</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span> </div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    printf(<span class="stringliteral">&quot;\n======= ssl_blocking ==========\n&quot;</span>);</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    ret = <a class="code hl_function" href="testc_8c.html#a37ed8cb14f8054d47f8d9720a4275311">ssl_blocking_test</a>(<a class="code hl_function" href="testc_8c.html#a3fa64553c7699f1d16f5f5277a212dad">tcp_connect</a>(ip, <span class="stringliteral">&quot;443&quot;</span>));</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    printf(<span class="stringliteral">&quot;https_bk_test, total_len = %d\n&quot;</span>, ret);</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>}</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno"><a class="line" href="testc_8c.html#a0ddf1224851353fc92bfbff6f499fa97">  263</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="testc_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>{</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <span class="keywordtype">char</span> ip[1024];</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    <span class="keywordtype">char</span>* hostname = NULL;</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    <span class="keywordflow">if</span> (argc == 2)</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        hostname = argv[1];</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (argc == 1)</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        hostname = <span class="stringliteral">&quot;www.google.com&quot;</span>;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        printf(<span class="stringliteral">&quot;usage:\n&quot;</span></div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>               <span class="stringliteral">&quot;\twebclient\n&quot;</span></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>               <span class="stringliteral">&quot;\twebclient www.yahoo.com\n&quot;</span>);</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    }</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <span class="comment">// get google ip</span></div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    <a class="code hl_function" href="testc_8c.html#a0d5e428ead5875e99663a6bb673fa0a8">hostname_to_ip</a>(hostname, ip);</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    printf(<span class="stringliteral">&quot;%s resolved to %s\n&quot;</span>, hostname, ip);</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    printf(<span class="stringliteral">&quot;======= ssl_nonblocking ==========\n&quot;</span>);</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    <span class="comment">// https test</span></div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="keywordtype">int</span> ret;</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    ret = <a class="code hl_function" href="testc_8c.html#a7952d415e4870feb5e6752db26c5b2ad">ssl_nonblocking_test</a>(<a class="code hl_function" href="testc_8c.html#a3fa64553c7699f1d16f5f5277a212dad">tcp_connect</a>(ip, <span class="stringliteral">&quot;443&quot;</span>));</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    printf(<span class="stringliteral">&quot;https_nbk_test, total_len = %d\n&quot;</span>, ret);</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    printf(<span class="stringliteral">&quot;\n======= ssl_blocking ==========\n&quot;</span>);</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    ret = <a class="code hl_function" href="testc_8c.html#a37ed8cb14f8054d47f8d9720a4275311">ssl_blocking_test</a>(<a class="code hl_function" href="testc_8c.html#a3fa64553c7699f1d16f5f5277a212dad">tcp_connect</a>(ip, <span class="stringliteral">&quot;443&quot;</span>));</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    printf(<span class="stringliteral">&quot;https_bk_test, total_len = %d\n&quot;</span>, ret);</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>}</div>
 <div class="ttc" id="assl__select_8c_html_a043988dfdcea5c8bf18f1fbe14aafccb"><div class="ttname"><a href="ssl__select_8c.html#a043988dfdcea5c8bf18f1fbe14aafccb">ssl_recv_simple</a></div><div class="ttdeci">int ssl_recv_simple(ssl_info *info, void *buf, int len, int to_ms, int *ssl_errno)</div><div class="ttdoc">auto generate ssl_recv_simple()</div><div class="ttdef"><b>Definition:</b> <a href="ssl__select_8c_source.html#l00436">ssl_select.c:436</a></div></div>
 <div class="ttc" id="assl__select_8c_html_a0c9f6ecec0d085b30e8d50b4d9bee969"><div class="ttname"><a href="ssl__select_8c.html#a0c9f6ecec0d085b30e8d50b4d9bee969">sslinfo_alloc</a></div><div class="ttdeci">ssl_info * sslinfo_alloc(void)</div><div class="ttdef"><b>Definition:</b> <a href="ssl__select_8c_source.html#l00493">ssl_select.c:493</a></div></div>
 <div class="ttc" id="assl__select_8c_html_a400be6c1caebc96bf5b2204f36c4eb81"><div class="ttname"><a href="ssl__select_8c.html#a400be6c1caebc96bf5b2204f36c4eb81">__set_nonblock</a></div><div class="ttdeci">int __set_nonblock(int sock)</div><div class="ttdef"><b>Definition:</b> <a href="ssl__select_8c_source.html#l00236">ssl_select.c:236</a></div></div>
@@ -413,9 +418,9 @@ $(document).ready(function(){initNavTree('testc_8c_source.html',''); initResizab
 <div class="ttc" id="astructssl__info_html_ae44756af7733c27940617e4d919488d3"><div class="ttname"><a href="structssl__info.html#ae44756af7733c27940617e4d919488d3">ssl_info::accept</a></div><div class="ttdeci">wait_event accept</div><div class="ttdoc">accept event record</div><div class="ttdef"><b>Definition:</b> <a href="ssl__select_8h_source.html#l00034">ssl_select.h:34</a></div></div>
 <div class="ttc" id="astructssl__info_html_ae7c0417fa2881f3546920311fee80311"><div class="ttname"><a href="structssl__info.html#ae7c0417fa2881f3546920311fee80311">ssl_info::ssl</a></div><div class="ttdeci">SSL * ssl</div><div class="ttdoc">SSL handle.</div><div class="ttdef"><b>Definition:</b> <a href="ssl__select_8h_source.html#l00029">ssl_select.h:29</a></div></div>
 <div class="ttc" id="atestc_8c_html_a0d5e428ead5875e99663a6bb673fa0a8"><div class="ttname"><a href="testc_8c.html#a0d5e428ead5875e99663a6bb673fa0a8">hostname_to_ip</a></div><div class="ttdeci">int hostname_to_ip(char *hostname, char *ip)</div><div class="ttdef"><b>Definition:</b> <a href="testc_8c_source.html#l00024">testc.c:24</a></div></div>
-<div class="ttc" id="atestc_8c_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="testc_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="testc_8c_source.html#l00258">testc.c:258</a></div></div>
+<div class="ttc" id="atestc_8c_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="testc_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="testc_8c_source.html#l00263">testc.c:263</a></div></div>
 <div class="ttc" id="atestc_8c_html_a33abe210666ac23cd667458558e93a43"><div class="ttname"><a href="testc_8c.html#a33abe210666ac23cd667458558e93a43">ssl_perror</a></div><div class="ttdeci">#define ssl_perror(tag)</div><div class="ttdef"><b>Definition:</b> <a href="testc_8c_source.html#l00089">testc.c:89</a></div></div>
-<div class="ttc" id="atestc_8c_html_a37ed8cb14f8054d47f8d9720a4275311"><div class="ttname"><a href="testc_8c.html#a37ed8cb14f8054d47f8d9720a4275311">ssl_blocking_test</a></div><div class="ttdeci">int ssl_blocking_test(int sk)</div><div class="ttdef"><b>Definition:</b> <a href="testc_8c_source.html#l00213">testc.c:213</a></div></div>
+<div class="ttc" id="atestc_8c_html_a37ed8cb14f8054d47f8d9720a4275311"><div class="ttname"><a href="testc_8c.html#a37ed8cb14f8054d47f8d9720a4275311">ssl_blocking_test</a></div><div class="ttdeci">int ssl_blocking_test(int sk)</div><div class="ttdef"><b>Definition:</b> <a href="testc_8c_source.html#l00216">testc.c:216</a></div></div>
 <div class="ttc" id="atestc_8c_html_a3fa64553c7699f1d16f5f5277a212dad"><div class="ttname"><a href="testc_8c.html#a3fa64553c7699f1d16f5f5277a212dad">tcp_connect</a></div><div class="ttdeci">int tcp_connect(char *addr, char *port)</div><div class="ttdef"><b>Definition:</b> <a href="testc_8c_source.html#l00045">testc.c:45</a></div></div>
 <div class="ttc" id="atestc_8c_html_a61f53a7db22cf8e507962e872be79a24"><div class="ttname"><a href="testc_8c.html#a61f53a7db22cf8e507962e872be79a24">ssl_connect</a></div><div class="ttdeci">ssl_info * ssl_connect(int sk)</div><div class="ttdef"><b>Definition:</b> <a href="testc_8c_source.html#l00095">testc.c:95</a></div></div>
 <div class="ttc" id="atestc_8c_html_a6e05ab8123eb5c5b1d7bd274976ee8d4"><div class="ttname"><a href="testc_8c.html#a6e05ab8123eb5c5b1d7bd274976ee8d4">printf_flag</a></div><div class="ttdeci">#define printf_flag(obj)</div></div>

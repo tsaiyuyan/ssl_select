@@ -109,6 +109,7 @@ $(document).ready(function(){initNavTree('testc_8c-example.html',''); initResiza
 <div class="contents">
 <p >test try connect to google web with blocking or nonblocking mode Examples 1</p>
 <div class="fragment"><div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="ssl__select_8h.html">ssl_select.h</a>&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;arpa/inet.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;error.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;fcntl.h&gt;</span></div>
@@ -124,7 +125,6 @@ $(document).ready(function(){initNavTree('testc_8c-example.html',''); initResiza
 <div class="line"><span class="preprocessor">#include &lt;sys/time.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;sys/types.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="ssl__select_8h.html">ssl_select.h</a>&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span>* <a id="a0" name="a0"></a><a class="code hl_variable" href="testc_8c.html#aad6e5cb6faf3b6bbf30d96e6d8827408">http_req</a> = <span class="stringliteral">&quot;GET / HTTP/1.0\r\n\r\n&quot;</span>;</div>
 <div class="line"> </div>
@@ -312,8 +312,11 @@ $(document).ready(function(){initNavTree('testc_8c-example.html',''); initResiza
 <div class="line">        }</div>
 <div class="line">    } <span class="keywordflow">while</span> (0);</div>
 <div class="line"> </div>
+<div class="line">    SSL_shutdown(_ssl-&gt;<a class="code hl_variable" href="structssl__info.html#ae7c0417fa2881f3546920311fee80311">ssl</a>);</div>
+<div class="line">    SSL_free(_ssl-&gt;<a class="code hl_variable" href="structssl__info.html#ae7c0417fa2881f3546920311fee80311">ssl</a>);</div>
+<div class="line">    close(_ssl-&gt;<a class="code hl_variable" href="structssl__info.html#a603590eee2547ee63c19918de7076b8a">sk</a>);</div>
 <div class="line">    free(_ssl);</div>
-<div class="line">    close(sk);</div>
+<div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> cnt;</div>
 <div class="line">}</div>
 <div class="line"> </div>
@@ -347,7 +350,7 @@ $(document).ready(function(){initNavTree('testc_8c-example.html',''); initResiza
 <div class="line"><span class="preprocessor">#ifdef PRINTF_RECV_BUF</span></div>
 <div class="line">                printf(<span class="stringliteral">&quot;%s&quot;</span>, recv_buf);</div>
 <div class="line"><span class="preprocessor">#else</span></div>
-<div class="line">                printf(<span class="stringliteral">&quot;recv(%d)\n&quot;</span>,len);</div>
+<div class="line">                printf(<span class="stringliteral">&quot;recv(%d)\n&quot;</span>, len);</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line">                cnt += len;</div>
 <div class="line">            } <span class="keywordflow">else</span> {</div>
@@ -357,8 +360,10 @@ $(document).ready(function(){initNavTree('testc_8c-example.html',''); initResiza
 <div class="line">        }</div>
 <div class="line">    } <span class="keywordflow">while</span> (0);</div>
 <div class="line"> </div>
+<div class="line">    SSL_shutdown(_ssl-&gt;<a class="code hl_variable" href="structssl__info.html#ae7c0417fa2881f3546920311fee80311">ssl</a>);</div>
+<div class="line">    SSL_free(_ssl-&gt;<a class="code hl_variable" href="structssl__info.html#ae7c0417fa2881f3546920311fee80311">ssl</a>);</div>
+<div class="line">    close(_ssl-&gt;<a class="code hl_variable" href="structssl__info.html#a603590eee2547ee63c19918de7076b8a">sk</a>);</div>
 <div class="line">    free(_ssl);</div>
-<div class="line">    close(sk);</div>
 <div class="line">    <span class="keywordflow">return</span> cnt;</div>
 <div class="line">}</div>
 <div class="line"> </div>
@@ -414,9 +419,9 @@ $(document).ready(function(){initNavTree('testc_8c-example.html',''); initResiza
 <div class="ttc" id="astructssl__info_html_ae44756af7733c27940617e4d919488d3"><div class="ttname"><a href="structssl__info.html#ae44756af7733c27940617e4d919488d3">ssl_info::accept</a></div><div class="ttdeci">wait_event accept</div><div class="ttdoc">accept event record</div><div class="ttdef"><b>Definition:</b> <a href="ssl__select_8h_source.html#l00034">ssl_select.h:34</a></div></div>
 <div class="ttc" id="astructssl__info_html_ae7c0417fa2881f3546920311fee80311"><div class="ttname"><a href="structssl__info.html#ae7c0417fa2881f3546920311fee80311">ssl_info::ssl</a></div><div class="ttdeci">SSL * ssl</div><div class="ttdoc">SSL handle.</div><div class="ttdef"><b>Definition:</b> <a href="ssl__select_8h_source.html#l00029">ssl_select.h:29</a></div></div>
 <div class="ttc" id="atestc_8c_html_a0d5e428ead5875e99663a6bb673fa0a8"><div class="ttname"><a href="testc_8c.html#a0d5e428ead5875e99663a6bb673fa0a8">hostname_to_ip</a></div><div class="ttdeci">int hostname_to_ip(char *hostname, char *ip)</div><div class="ttdef"><b>Definition:</b> <a href="testc_8c_source.html#l00024">testc.c:24</a></div></div>
-<div class="ttc" id="atestc_8c_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="testc_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="testc_8c_source.html#l00258">testc.c:258</a></div></div>
+<div class="ttc" id="atestc_8c_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="testc_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="testc_8c_source.html#l00263">testc.c:263</a></div></div>
 <div class="ttc" id="atestc_8c_html_a33abe210666ac23cd667458558e93a43"><div class="ttname"><a href="testc_8c.html#a33abe210666ac23cd667458558e93a43">ssl_perror</a></div><div class="ttdeci">#define ssl_perror(tag)</div><div class="ttdef"><b>Definition:</b> <a href="testc_8c_source.html#l00089">testc.c:89</a></div></div>
-<div class="ttc" id="atestc_8c_html_a37ed8cb14f8054d47f8d9720a4275311"><div class="ttname"><a href="testc_8c.html#a37ed8cb14f8054d47f8d9720a4275311">ssl_blocking_test</a></div><div class="ttdeci">int ssl_blocking_test(int sk)</div><div class="ttdef"><b>Definition:</b> <a href="testc_8c_source.html#l00213">testc.c:213</a></div></div>
+<div class="ttc" id="atestc_8c_html_a37ed8cb14f8054d47f8d9720a4275311"><div class="ttname"><a href="testc_8c.html#a37ed8cb14f8054d47f8d9720a4275311">ssl_blocking_test</a></div><div class="ttdeci">int ssl_blocking_test(int sk)</div><div class="ttdef"><b>Definition:</b> <a href="testc_8c_source.html#l00216">testc.c:216</a></div></div>
 <div class="ttc" id="atestc_8c_html_a3fa64553c7699f1d16f5f5277a212dad"><div class="ttname"><a href="testc_8c.html#a3fa64553c7699f1d16f5f5277a212dad">tcp_connect</a></div><div class="ttdeci">int tcp_connect(char *addr, char *port)</div><div class="ttdef"><b>Definition:</b> <a href="testc_8c_source.html#l00045">testc.c:45</a></div></div>
 <div class="ttc" id="atestc_8c_html_a61f53a7db22cf8e507962e872be79a24"><div class="ttname"><a href="testc_8c.html#a61f53a7db22cf8e507962e872be79a24">ssl_connect</a></div><div class="ttdeci">ssl_info * ssl_connect(int sk)</div><div class="ttdef"><b>Definition:</b> <a href="testc_8c_source.html#l00095">testc.c:95</a></div></div>
 <div class="ttc" id="atestc_8c_html_a6e05ab8123eb5c5b1d7bd274976ee8d4"><div class="ttname"><a href="testc_8c.html#a6e05ab8123eb5c5b1d7bd274976ee8d4">printf_flag</a></div><div class="ttdeci">#define printf_flag(obj)</div></div>
