@@ -1,0 +1,26 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: build ssl_select
+        run: make
+
+      - name: build example
+        run: make -C example
+
+      - name: run testc example
+        run: make -C example testc
+
+      - name: Run clean
+        run: make clean && make -C example clean
