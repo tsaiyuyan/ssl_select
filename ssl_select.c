@@ -340,6 +340,7 @@ int ssl_errno_str(ssl_info * info, int ssl_errno, char * buf, int buflen)
 				ssl_errno, 
 				ERR_reason_error_string(ERR_peek_last_error())
 				);
+			ERR_clear_error();
 			if(len < 0)
 				break;
 			len += show_x509_err_str(info, &buf[len], buflen - len);
