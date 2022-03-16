@@ -25,7 +25,9 @@ typedef struct {
 * - ssl_handle_fds()
 */
 typedef struct {
-	int sk;	///< socket handle
+	int sk;	/**< socket handle
+	* this sould be created by socket()
+	*/
 	SSL *ssl; ///< SSL handle
 	SSL_CTX *ctx; ///< SSL_CTX
 	wait_event recv; ///< recv event record
